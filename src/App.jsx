@@ -1,11 +1,31 @@
-import Home from "./components/Home";
+import { useState } from "react";
+import TabsBar from "./components/layout/TabsBar";
+import Home from "./pages/Home";
+import Species from "./pages/Species";
+
+const tabs = [
+  { label: 'Home', content: <Home />},
+  { label: 'Species', content: <Species />}
+]
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState(0)
+
+  const handleTabClick = (tabIndex) => {
+    setActiveTab(tabIndex)
+  }
+
   return (
-    <div className="main">
-      <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" />
-      <div className="w-full h-screen absolute top-0 left-0 flex items-center justify-center">
-        <Home />
+    <div className="relative overflow-hidden">
+      <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" alt="Background Image" />
+      
+      <div className="absolute w-full h-full inset-0 flex flex-col mt-16 justify-start items-center">
+        <div className="flex justify-center items-end w-4/5 bg-black/40 backdrop-blur-sm border-b border-green-700">
+          <TabsBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
+        </div>
+        <div className="w-4/5 h-3/4 bg-black/40 text-white backdrop-blur-sm">
+          {tabs[activeTab].content}
+        </div>
       </div>
     </div>
   )
