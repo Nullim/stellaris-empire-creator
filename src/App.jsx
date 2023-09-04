@@ -19,12 +19,17 @@ export default function App() {
     <div className="relative overflow-hidden">
       <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" alt="Background Image" />
       
-      <div className="absolute w-full h-full inset-0 flex flex-col mt-16 justify-start items-center">
-        <div className="flex justify-center items-end w-4/5 bg-black/40 backdrop-blur-sm border-b border-green-700">
+      <div className="absolute w-full h-full inset-0 flex flex-col mt-8 justify-start items-center">
+        <div className="flex justify-center items-end w-11/12 bg-black/40 backdrop-blur-sm border-b border-green-700">
           <TabsBar tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
         </div>
-        <div className="w-4/5 h-3/4 bg-black/40 text-white backdrop-blur-sm">
-          {tabs[activeTab].content}
+        <div className="w-11/12 h-5/6 bg-black/40 text-white backdrop-blur-sm flex flex-col">
+          <div className="h-2/5 text-center">
+            Content
+          </div>
+          <div className="h-3/5">
+            {tabs[activeTab].content}
+          </div>
         </div>
       </div>
     </div>
