@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import speciesData from "../utils/species.json";
+import speciesData from "../../utils/species.json";
 
-export default function Species () {
+export default function SpeciesPortraits () {
   const [selectedSpeciesData, setSelectedSpeciesData] = useState(speciesData[0]);
   const [selectedPortrait, setSelectedPortrait] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleSpeciesClick = (species) => {
+    if (species === selectedSpeciesData) return;
     setIsLoading(true)
     setSelectedSpeciesData(() => species)
   }
