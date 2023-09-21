@@ -34,12 +34,12 @@ export default function SpeciesPortraits () {
 
   return(
     <div className="flex h-full w-full">
-      <div className="w-1/6 p-4 border border-green-600 overflow-y-auto scrollbar-thin scrollbar-thumb-green-800 scrollbar-track-slate-500">
+      <div className="w-1/6 p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-green-800 scrollbar-track-slate-500">
         <ul>
           {speciesData.map((namelist, index) => (
             <li 
               key={index} 
-              className={`py-1 px-2 cursor-pointer border ${
+              className={`py-1 px-2 cursor-pointer border font-bold ${
                 namelist === selectedSpeciesData ? "border-cyan-300" : "border-transparent"
               }`}
               onClick={() => handleSpeciesClick(namelist)}>
@@ -48,10 +48,10 @@ export default function SpeciesPortraits () {
           ))}
         </ul>
       </div>
-      <div className="w-full p-4 border border-green-600">
-        <div className="grid grid-cols-9 gap-1">
+      <div className="w-full p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-green-800 scrollbar-track-slate-500">
+        <div className="flex flex-wrap">
           {isLoading ? (
-            <p className="text-center cursor-progress">Loading...</p>
+            <p className="cursor-progress">Loading...</p>
           ) : (
             selectedSpeciesData.images.map((image, index) => (
               <img

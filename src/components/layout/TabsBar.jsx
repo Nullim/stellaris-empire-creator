@@ -26,9 +26,8 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
           onMouseEnter={() => handleTabMouseHover(index)} 
           onMouseLeave={handleTabMouseLeave}
         >
-          
           <button
-            className={`cursor-pointer px-4 py-2 ${
+            className={`cursor-pointer px-4 py-2 font-bold ${
               activeTab === index ? "bg-green-800 text-white" : "bg-green-900 text-white"
             }`}
           >
@@ -40,7 +39,7 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
               {tab.menuItem.map((item, itemIndex) => (
                 <button
                   key={itemIndex}
-                  className="block px-4 py-4 text-white hover:bg-green-700 w-full text-left"
+                  className="block px-4 py-2 text-white hover:bg-green-700 w-full text-left"
                   onClick={() => handleMenuItemSelect(item, tab.label)}
                 >
                   {item.menuLabel}
@@ -58,9 +57,11 @@ TabsBar.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      menuItem: PropTypes.shape({
-        menuLabel: PropTypes.string.isRequired
-      })
+      menuItem: PropTypes.arrayOf(
+        PropTypes.shape({
+          menuLabel: PropTypes.string.isRequired
+        })
+      )
     })
   ).isRequired,
   onTabClick: PropTypes.func.isRequired,
