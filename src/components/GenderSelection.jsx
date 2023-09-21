@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const BASE_URL = '../../public/images/genders'
@@ -30,6 +30,19 @@ const genderData = [
 const GenderSelection = ({ handleGenderClick }) => {
   const [selectedGender, setSelectedGender] = useState('default');
   const [hoveredGender, setHoveredGender] = useState(null);
+
+  useEffect(() => {
+    genderData.forEach((genderInfo) => {
+      const normalImage = new Image();
+      normalImage.src = `${genderInfo.genderURL}${genderInfo.normal}`;
+
+      const selectedImage = new Image();
+      selectedImage.src = `${genderInfo.genderURL}${genderInfo.selected}`;
+
+      const hoverImage = new Image();
+      hoverImage.src = `${genderInfo.genderURL}${genderInfo.hover}`;
+    });
+  }, []);
 
   const handleMouseEnter = (gender) => {
     setHoveredGender(gender);
