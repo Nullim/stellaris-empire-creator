@@ -1,4 +1,4 @@
-import Home from "../pages/about/Home";
+import About from "../pages/home/About";
 
 import SpeciesPortraits from "../pages/species/SpeciesPortraits";
 import SpeciesName from "../pages/species/SpeciesName";
@@ -6,9 +6,9 @@ import SpeciesTraits from "../pages/species/SpeciesTraits";
 
 const tabsData = [
   {
-    label: "About",
+    label: "Home",
     menuItem: [
-      { menuLabel: "Home", content: <Home /> }
+      { menuLabel: "About", content: <About /> }
     ],
   },
   {

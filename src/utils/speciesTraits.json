@@ -1,0 +1,25 @@
+[
+  {
+    "traitGroup": "Organic",
+    "traits": [
+      {
+        "traitName": "Adaptive",
+        "traitImage": "/images/traits/organic/trait_adaptive.png",
+        "traitCost": 2
+      }
+    ]
+  },
+  {
+    "traitGroup": "Machine",
+    "requiredTrait": { "traitName": "Machine", "traitImage": "/images/traits/mechanical/trait_machine_unit.png"},
+    "traits": [
+      {
+        "traitName": "",
+        "traitImage": ""
+      }
+    ]
+  },
+  {
+    "traitGroup": "Origin"
+  }
+]

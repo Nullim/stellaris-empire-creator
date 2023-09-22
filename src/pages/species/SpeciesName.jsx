@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import GenderSelection from "../../components/GenderSelection";
 
 export default function SpeciesName() {
@@ -7,32 +7,62 @@ export default function SpeciesName() {
   const [namePlural, setNamePlural] = useState("");
   const [gender, setGender] = useState("default")
 
-  console.log(gender); // This is a placeholder to get rid of the eslint warning. Remove before final release.
+  console.log(gender) // Track gender value. Remove this before final release.
+
+  useEffect(() => {
+    const getParamsFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+      const nameParam = params.get('uN');
+      const pluralParam = params.get('uP');
+      const adjectiveParam = params.get('uA');
+
+      if (nameParam) setName(nameParam);
+      if (pluralParam) setNamePlural(pluralParam);
+      if (adjectiveParam) setAdjective(adjectiveParam);
+    };
+    getParamsFromURL();
+  }, []);
 
   const changeName = (e) => {
-    setName(e.target.value);
+    const newName = e.target.value;
+    setName(newName);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('uN', newName);
+    window.history.replaceState({}, '', `?${params.toString()}`);
   }
 
   const changeNamePlural = (e) => {
-    setNamePlural(e.target.value);
+    const newPlural = e.target.value;
+    setNamePlural(newPlural);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('uP', newPlural);
+    window.history.replaceState({}, '', `?${params.toString()}`);
   }
 
   const changeAdjective = (e) => {
-    setAdjective(e.target.value);
+    const newAdjective = e.target.value;
+    setAdjective(newAdjective);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('uA', newAdjective);
+    window.history.replaceState({}, '', `?${params.toString()}`);
   }
 
   const changeGender = (selectedGender) => {
-    setGender(selectedGender)
+    setGender(selectedGender);
   }
 
   return (
     <div className="flex justify-evenly font-bold">
-      <div className="block">
+      <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
           <label className="pb-1">Name</label>
           <input
             className="bg-black/30 backdrop-blur-md font-normal pl-1"
             value={name}
+            maxLength={15}
             onChange={changeName}
           ></input>
         </div>
@@ -41,6 +71,7 @@ export default function SpeciesName() {
           <input
             className="bg-black/30 backdrop-blur-md font-normal pl-1"
             value={namePlural}
+            maxLength={20}
             onChange={changeNamePlural}
           ></input>
         </div>
@@ -49,6 +80,7 @@ export default function SpeciesName() {
           <input
             className="bg-black/30 backdrop-blur-md font-normal pl-1"
             value={adjective}
+            maxLength={20}
             onChange={changeAdjective}
           ></input>
         </div>
@@ -56,15 +88,17 @@ export default function SpeciesName() {
       <div className="block">
         <div className="flex flex-col pt-10">
           <label className="pb-1">Biography (optional)</label>
-          <textarea 
-            className="bg-black/30 backdrop-blur-md font-normal pl-1 resize-none" 
-            rows={5} 
-            cols={50} 
+          <textarea
+            className="bg-black/30 backdrop-blur-md font-normal pl-1 resize-none"
+            rows={5}
+            cols={50}
+            placeholder="A long time ago in a galaxy far, far away..."
+            maxLength={500}
             spellCheck={false}
           />
         </div>
       </div>
-      <div className="block">
+      <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
           <label className="pb-1">Gender (optional)</label>
           <GenderSelection handleGenderClick={changeGender} />

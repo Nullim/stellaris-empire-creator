@@ -16,9 +16,8 @@ export default function App() {
   return (
     <div className="relative overflow-hidden font-gothic">
       <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" alt="Background Image" />
-      
       <div className="absolute w-full h-full inset-0 flex flex-col mt-8 justify-start items-center">
-        <div className="flex justify-center items-end w-11/12 bg-black/40 backdrop-blur-sm border-b border-green-700 z-10">
+        <div className="hidden lg:flex justify-center items-end w-11/12 bg-black/40 backdrop-blur-sm border-b border-green-700 z-10">
           <TabsBar 
             tabs={tabsData} 
             activeTab={activeTab} 

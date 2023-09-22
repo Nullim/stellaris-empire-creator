@@ -42,6 +42,13 @@ const GenderSelection = ({ handleGenderClick }) => {
       const hoverImage = new Image();
       hoverImage.src = `${genderInfo.genderURL}${genderInfo.hover}`;
     });
+
+    const getParamsFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+      const genderParam = params.get('uG');
+      if (genderParam) setSelectedGender(genderParam)
+    }
+    getParamsFromURL();
   }, []);
 
   const handleMouseEnter = (gender) => {
@@ -53,9 +60,19 @@ const GenderSelection = ({ handleGenderClick }) => {
   };
 
   const handleClick = (gender) => {
-    setSelectedGender((prevGender) =>
-      prevGender === gender ? 'default' : gender
-    );
+    setSelectedGender((prevGender) => {
+      const params = new URLSearchParams(window.location.search);
+      let newGender;
+      if (prevGender === gender) {
+        newGender = 'default';
+        params.delete('uG');
+      } else {
+        newGender = gender;
+        params.set('uG', gender);
+      }
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      return newGender;
+    });
     handleGenderClick(gender);
   };
 

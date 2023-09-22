@@ -6,6 +6,23 @@ export default function SpeciesPortraits () {
   const [selectedPortrait, setSelectedPortrait] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    const getParamsFromURL = () => {
+      const params = new URLSearchParams(window.location.search);
+      const speciesParam = params.get('sN');
+      const portraitParam = params.get('sP');
+
+      if (speciesParam) {
+        const foundSpecies = speciesData.find(species => species.name === speciesParam);
+        if (foundSpecies) {
+          setSelectedSpeciesData(foundSpecies);
+          setSelectedPortrait(portraitParam);
+        }
+      }
+    };
+    getParamsFromURL();
+  }, []);
+
   const handleSpeciesClick = (species) => {
     if (species === selectedSpeciesData) return;
     setIsLoading(true)
@@ -14,6 +31,10 @@ export default function SpeciesPortraits () {
 
   const handlePortraitClick = (portrait) => {
     setSelectedPortrait(portrait)
+    const params = new URLSearchParams(window.location.search);
+    params.set('sN', selectedSpeciesData.name);
+    params.set('sP', portrait);
+    window.history.replaceState({}, '', `?${params.toString()}`)
   }
 
   useEffect(() => {
