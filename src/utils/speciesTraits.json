@@ -1,25 +1,359 @@
 [
   {
     "traitGroup": "Organic",
+    "url": "/images/traits/organic/",
     "traits": [
       {
-        "traitName": "Adaptive",
-        "traitImage": "/images/traits/organic/trait_adaptive.png",
-        "traitCost": 2
+        "traitGroup": "Individual Group",
+        "traits": [
+          {
+            "traitName": "Agrarian",
+            "traitImage": "trait_agrarian.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Ingenious",
+            "traitImage": "trait_ingenious.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Industrious",
+            "traitImage": "trait_industrious.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Intelligent",
+            "traitImage": "trait_intelligent.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Thrifty",
+            "traitImage": "trait_thrifty.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Resilient",
+            "traitImage": "trait_resilient.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Aquatic",
+            "traitImage": "trait_aquatic.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Inorganic Breath",
+            "traitImage": "trait_inorganic_breath.png",
+            "traitCost": 3,
+            "excludes": []
+          },
+          {
+            "traitName": "Noxious",
+            "traitImage": "trait_noxious.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Decadent",
+            "traitImage": "trait_decadent.png",
+            "traitCost": -1,
+            "excludes": []
+          }
+        ]
+      },
+      {
+        "traitGroup": "Intelligence Group",
+        "traits": [
+          {
+            "traitName": "Natural Engineers",
+            "traitImage": "trait_natural_engineers.png",
+            "traitCost": 1,
+            "excludes": ["Natural Physicists", "Natural Sociologists"]
+          },
+          {
+            "traitName": "Natural Physicists",
+            "traitImage": "trait_natural_physicists.png",
+            "traitCost": 1,
+            "excludes": ["Natural Engineers", "Natural Sociologists"]
+          },
+          {
+            "traitName": "Natural Sociologists",
+            "traitImage": "trait_natural_sociologists.png",
+            "traitCost": 1,
+            "excludes": ["Natural Engineers", "Natural Physicists"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Adaptive Group",
+        "traits": [
+          {
+            "traitName": "Extremely Adaptive",
+            "traitImage": "trait_extremely_adaptive.png",
+            "traitCost": 4,
+            "excludes": ["Adaptive", "Nonadaptive"]
+          },
+          {
+            "traitName": "Adaptive",
+            "traitImage": "trait_adaptive.png",
+            "traitCost": 2,
+            "excludes": ["Extremely Adaptive", "Nonadaptive"]
+          },
+          {
+            "traitName": "Nonadaptive",
+            "traitImage": "trait_nonadaptive.png",
+            "traitCost": -2,
+            "excludes": ["Extremely Adaptive", "Adaptive"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Growth Group",
+        "traits": [
+          {
+            "traitName": "Rapid Breeders",
+            "traitImage": "trait_rapid_breeders.png",
+            "traitCost": 2,
+            "excludes": ["Slow Breeders", "Incubators", "Existential Iteroparity"]
+          },
+          {
+            "traitName": "Slow Breeders",
+            "traitImage": "trait_slow_breeders.png",
+            "traitCost": -2,
+            "excludes": ["Rapid Breeders", "Incubators", "Psychological Infertility", "Existential Iteroparity"]
+          },
+          {
+            "traitName": "Incubators",
+            "traitImage": "trait_incubator.png",
+            "traitCost": 2,
+            "excludes": ["Rapid Breeders", "Slow Breeders", "Existential Iteroparity"]
+          },
+          {
+            "traitName": "Existential Iteroparity",
+            "traitImage": "trait_existential_iteroparity.png",
+            "traitCost": 2,
+            "excludes": ["Rapid Breeders", "Slow Breeders", "Psychological Infertility", "Incubators"]
+          },
+          {
+            "traitName": "Psychological Infertility",
+            "traitImage": "trait_psychological_infertility.png",
+            "traitCost": -2,
+            "excludes": ["Slow Breeders", "Existential Iteroparity"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Leader Group",
+        "traits": [
+          {
+            "traitName": "Talented",
+            "traitImage": "trait_talented.png",
+            "traitCost": 1,
+            "excludes": ["Jinxed"]
+          },
+          {
+            "traitName": "Jinxed",
+            "traitImage": "trait_jinxed.png",
+            "traitCost": -1,
+            "excludes": ["Talented"]
+          },
+          {
+            "traitName": "Quick Learners",
+            "traitImage": "trait_quick_learners.png",
+            "traitCost": 1,
+            "excludes": ["Slow Learners"]
+          },
+          {
+            "traitName": "Slow Learners",
+            "traitImage": "trait_slow_learners.png",
+            "traitCost": -1,
+            "excludes": ["Quick Learners"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Unity Group",
+        "traits": [
+          {
+            "traitName": "Traditional",
+            "traitImage": "trait_traditional.png",
+            "traitCost": 1,
+            "excludes": ["Quarrelsome"]
+          },
+          {
+            "traitName": "Quarrelsome",
+            "traitImage": "trait_quarrelsome.png",
+            "traitCost": -1,
+            "excludes": ["Traditional"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Empire Size Group",
+        "traits": [
+          {
+            "traitName": "Docile",
+            "traitImage": "trait_docile.png",
+            "traitCost": 2,
+            "excludes": ["Unruly"]
+          },
+          {
+            "traitName": "Unruly",
+            "traitImage": "trait_unruly.png",
+            "traitCost": -2,
+            "excludes": ["Docile"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Strength Group",
+        "traits": [
+          {
+            "traitName": "Very Strong",
+            "traitImage": "trait_very_strong.png",
+            "traitCost": 3,
+            "excludes": ["Strong", "Weak"]
+          },
+          {
+            "traitName": "Strong",
+            "traitImage": "trait_strong.png",
+            "traitCost": 1,
+            "excludes": ["Very Strong", "Weak"]
+          },
+          {
+            "traitName": "Weak",
+            "traitImage": "trait_weak.png",
+            "traitCost": -1,
+            "excludes": ["Very Strong", "Strong"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Immigration Group",
+        "traits": [
+          {
+            "traitName": "Nomadic",
+            "traitImage": "trait_nomadic.png",
+            "traitCost": 1,
+            "excludes": ["Sedentary"]
+          },
+          {
+            "traitName": "Sedentary",
+            "traitImage": "trait_sedentary.png",
+            "traitCost": -1,
+            "excludes": ["Nomadic"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Housing Group",
+        "traits": [
+          {
+            "traitName": "Communal",
+            "traitImage": "trait_communal.png",
+            "traitCost": 1,
+            "excludes": ["Solitary"]
+          },
+          {
+            "traitName": "Solitary",
+            "traitImage": "trait_solitary.png",
+            "traitCost": -1,
+            "excludes": ["Communal"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Amenities Group",
+        "traits": [
+          {
+            "traitName": "Charismatic",
+            "traitImage": "trait_charismatic.png",
+            "traitCost": 2,
+            "excludes": ["Repugnant"]
+          },
+          {
+            "traitName": "Repugnant",
+            "traitImage": "trait_repugnant.png",
+            "traitCost": -2,
+            "excludes": ["Charismatic"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Ethics Group",
+        "traits": [
+          {
+            "traitName": "Conformists",
+            "traitImage": "trait_conformists.png",
+            "traitCost": 1,
+            "excludes": ["Deviants"]
+          },
+          {
+            "traitName": "Deviants",
+            "traitImage": "trait_deviants.png",
+            "traitCost": -1,
+            "excludes": ["Conformists"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Lifespan Group",
+        "traits": [
+          {
+            "traitName": "Venerable",
+            "traitImage": "trait_venerable.png",
+            "traitCost": 4,
+            "excludes": ["Enduring", "Fleeting"]
+          },
+          {
+            "traitName": "Enduring",
+            "traitImage": "trait_enduring.png",
+            "traitCost": 1,
+            "excludes": ["Venerable", "Fleeting"]
+          },
+          {
+            "traitName": "Fleeting",
+            "traitImage": "trait_fleeting.png",
+            "traitCost": -1,
+            "excludes": ["Venerable", "Enduring"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Consumer Goods Group",
+        "traits": [
+          {
+            "traitName": "Conservationist",
+            "traitImage": "trait_conservational.png",
+            "traitCost": 1,
+            "excludes": ["Wasteful"]
+          },
+          {
+            "traitName": "Wasteful",
+            "traitImage": "trait_wasteful.png",
+            "traitCost": -1,
+            "excludes": ["Conservationist"]
+          }
+        ]
       }
     ]
   },
   {
     "traitGroup": "Machine",
-    "requiredTrait": { "traitName": "Machine", "traitImage": "/images/traits/mechanical/trait_machine_unit.png"},
+    "url": "/images/traits/mechanical/",
+    "requiredTrait": { 
+      "traitName": "Machine", 
+      "traitImage": "/images/traits/mechanical/trait_machine_unit.png", 
+      "traitCost": 0
+    },
     "traits": [
-      {
-        "traitName": "",
-        "traitImage": ""
-      }
     ]
-  },
-  {
-    "traitGroup": "Origin"
   }
 ]

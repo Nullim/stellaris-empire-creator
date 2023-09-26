@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const BASE_URL = '../../public/images/genders'
+const BASE_URL = '../../images/genders'
 
 const genderData = [
   {
@@ -30,6 +30,7 @@ const genderData = [
 const GenderSelection = ({ handleGenderClick }) => {
   const [selectedGender, setSelectedGender] = useState('default');
   const [hoveredGender, setHoveredGender] = useState(null);
+  const [isMachine, setIsMachine] = useState(false);
 
   useEffect(() => {
     genderData.forEach((genderInfo) => {
@@ -46,7 +47,16 @@ const GenderSelection = ({ handleGenderClick }) => {
     const getParamsFromURL = () => {
       const params = new URLSearchParams(window.location.search);
       const genderParam = params.get('uG');
-      if (genderParam) setSelectedGender(genderParam)
+      const speciesParam = params.get('sN');
+      if (speciesParam === 'Machine') {
+        setIsMachine(true);
+        setSelectedGender('default');
+      } else if (genderParam) {
+        setIsMachine(false);
+        setSelectedGender(genderParam);
+      } else {
+        setIsMachine(false);
+      }
     }
     getParamsFromURL();
   }, []);
@@ -63,6 +73,7 @@ const GenderSelection = ({ handleGenderClick }) => {
     setSelectedGender((prevGender) => {
       const params = new URLSearchParams(window.location.search);
       let newGender;
+
       if (prevGender === gender) {
         newGender = 'default';
         params.delete('uG');
@@ -70,6 +81,7 @@ const GenderSelection = ({ handleGenderClick }) => {
         newGender = gender;
         params.set('uG', gender);
       }
+
       window.history.replaceState({}, '', `?${params.toString()}`);
       return newGender;
     });
@@ -79,7 +91,7 @@ const GenderSelection = ({ handleGenderClick }) => {
   return (
     <div className='flex flex-col'>
       <div className="flex items-center justify-start">
-        {genderData.map((genderInfo) => (
+        {!isMachine && genderData.map((genderInfo) => (
           <div
             key={genderInfo.gender}
             className="cursor-pointer pr-3"
@@ -87,6 +99,7 @@ const GenderSelection = ({ handleGenderClick }) => {
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(genderInfo.gender)}
           >
+            {/* Render appropriate gender image */}
             <img
               src={
                 selectedGender === genderInfo.gender
@@ -101,7 +114,7 @@ const GenderSelection = ({ handleGenderClick }) => {
         ))}
       </div>
       <p className='font-thin pt-2'>
-        Note: You can click the same gender icon to return to &quot;default&quot; genders.
+        {isMachine ? "You cannot select a gender as a machine." : `Note: You can click the same gender icon to return to "default" genders.`}
       </p>
     </div>
   );
