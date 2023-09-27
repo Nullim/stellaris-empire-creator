@@ -1,8 +1,9 @@
 [
   {
-    "traitGroup": "Organic",
+    "traitArchetype": "Organic",
     "url": "/images/traits/organic/",
-    "traits": [
+    "excludedArchetype": ["Machine", "Botanical"],
+    "archetypeTraits": [
       {
         "traitGroup": "Individual Group",
         "traits": [
@@ -10,37 +11,37 @@
             "traitName": "Agrarian",
             "traitImage": "trait_agrarian.png",
             "traitCost": 2,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Ingenious",
             "traitImage": "trait_ingenious.png",
             "traitCost": 2,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Industrious",
             "traitImage": "trait_industrious.png",
             "traitCost": 2,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Intelligent",
             "traitImage": "trait_intelligent.png",
             "traitCost": 2,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Thrifty",
             "traitImage": "trait_thrifty.png",
             "traitCost": 2,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Resilient",
             "traitImage": "trait_resilient.png",
             "traitCost": 1,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Aquatic",
@@ -52,13 +53,13 @@
             "traitName": "Inorganic Breath",
             "traitImage": "trait_inorganic_breath.png",
             "traitCost": 3,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Noxious",
             "traitImage": "trait_noxious.png",
             "traitCost": 1,
-            "excludes": []
+            "excludes": ["Invasive Species"]
           },
           {
             "traitName": "Decadent",
@@ -75,19 +76,19 @@
             "traitName": "Natural Engineers",
             "traitImage": "trait_natural_engineers.png",
             "traitCost": 1,
-            "excludes": ["Natural Physicists", "Natural Sociologists"]
+            "excludes": ["Natural Physicists", "Natural Sociologists", "Invasive Species"]
           },
           {
             "traitName": "Natural Physicists",
             "traitImage": "trait_natural_physicists.png",
             "traitCost": 1,
-            "excludes": ["Natural Engineers", "Natural Sociologists"]
+            "excludes": ["Natural Engineers", "Natural Sociologists", "Invasive Species"]
           },
           {
             "traitName": "Natural Sociologists",
             "traitImage": "trait_natural_sociologists.png",
             "traitCost": 1,
-            "excludes": ["Natural Engineers", "Natural Physicists"]
+            "excludes": ["Natural Engineers", "Natural Physicists", "Invasive Species"]
           }
         ]
       },
@@ -98,13 +99,13 @@
             "traitName": "Extremely Adaptive",
             "traitImage": "trait_extremely_adaptive.png",
             "traitCost": 4,
-            "excludes": ["Adaptive", "Nonadaptive"]
+            "excludes": ["Adaptive", "Nonadaptive", "Invasive Species"]
           },
           {
             "traitName": "Adaptive",
             "traitImage": "trait_adaptive.png",
             "traitCost": 2,
-            "excludes": ["Extremely Adaptive", "Nonadaptive"]
+            "excludes": ["Extremely Adaptive", "Nonadaptive", "Invasive Species"]
           },
           {
             "traitName": "Nonadaptive",
@@ -121,25 +122,33 @@
             "traitName": "Rapid Breeders",
             "traitImage": "trait_rapid_breeders.png",
             "traitCost": 2,
-            "excludes": ["Slow Breeders", "Incubators", "Existential Iteroparity"]
+            "excludes": ["Slow Breeders", "Incubators", "Existential Iteroparity", "Budding",
+              "Invasive Species", "Lithoid"
+            ]
           },
           {
             "traitName": "Slow Breeders",
             "traitImage": "trait_slow_breeders.png",
             "traitCost": -2,
-            "excludes": ["Rapid Breeders", "Incubators", "Psychological Infertility", "Existential Iteroparity"]
+            "excludes": ["Rapid Breeders", "Incubators", "Psychological Infertility",
+              "Existential Iteroparity", "Budding", "Lithoid"
+            ]
           },
           {
             "traitName": "Incubators",
             "traitImage": "trait_incubator.png",
             "traitCost": 2,
-            "excludes": ["Rapid Breeders", "Slow Breeders", "Existential Iteroparity"]
+            "excludes": ["Rapid Breeders", "Slow Breeders", "Existential Iteroparity", "Budding",
+              "Invasive Species", "Crystallization"
+            ]
           },
           {
             "traitName": "Existential Iteroparity",
             "traitImage": "trait_existential_iteroparity.png",
             "traitCost": 2,
-            "excludes": ["Rapid Breeders", "Slow Breeders", "Psychological Infertility", "Incubators"]
+            "excludes": ["Rapid Breeders", "Slow Breeders", "Psychological Infertility", "Incubators",
+              "Budding", "Invasive Species", "Crystallization"
+            ]
           },
           {
             "traitName": "Psychological Infertility",
@@ -156,7 +165,7 @@
             "traitName": "Talented",
             "traitImage": "trait_talented.png",
             "traitCost": 1,
-            "excludes": ["Jinxed"]
+            "excludes": ["Jinxed", "Invasive Species"]
           },
           {
             "traitName": "Jinxed",
@@ -168,7 +177,7 @@
             "traitName": "Quick Learners",
             "traitImage": "trait_quick_learners.png",
             "traitCost": 1,
-            "excludes": ["Slow Learners"]
+            "excludes": ["Slow Learners", "Invasive Species"]
           },
           {
             "traitName": "Slow Learners",
@@ -185,7 +194,7 @@
             "traitName": "Traditional",
             "traitImage": "trait_traditional.png",
             "traitCost": 1,
-            "excludes": ["Quarrelsome"]
+            "excludes": ["Quarrelsome", "Invasive Species"]
           },
           {
             "traitName": "Quarrelsome",
@@ -202,7 +211,7 @@
             "traitName": "Docile",
             "traitImage": "trait_docile.png",
             "traitCost": 2,
-            "excludes": ["Unruly"]
+            "excludes": ["Unruly", "Invasive Species"]
           },
           {
             "traitName": "Unruly",
@@ -219,13 +228,13 @@
             "traitName": "Very Strong",
             "traitImage": "trait_very_strong.png",
             "traitCost": 3,
-            "excludes": ["Strong", "Weak"]
+            "excludes": ["Strong", "Weak", "Invasive Species"]
           },
           {
             "traitName": "Strong",
             "traitImage": "trait_strong.png",
             "traitCost": 1,
-            "excludes": ["Very Strong", "Weak"]
+            "excludes": ["Very Strong", "Weak", "Invasive Species"]
           },
           {
             "traitName": "Weak",
@@ -242,7 +251,7 @@
             "traitName": "Nomadic",
             "traitImage": "trait_nomadic.png",
             "traitCost": 1,
-            "excludes": ["Sedentary"]
+            "excludes": ["Sedentary", "Invasive Species"]
           },
           {
             "traitName": "Sedentary",
@@ -259,7 +268,7 @@
             "traitName": "Communal",
             "traitImage": "trait_communal.png",
             "traitCost": 1,
-            "excludes": ["Solitary"]
+            "excludes": ["Solitary", "Invasive Species"]
           },
           {
             "traitName": "Solitary",
@@ -276,7 +285,7 @@
             "traitName": "Charismatic",
             "traitImage": "trait_charismatic.png",
             "traitCost": 2,
-            "excludes": ["Repugnant"]
+            "excludes": ["Repugnant", "Invasive Species"]
           },
           {
             "traitName": "Repugnant",
@@ -293,7 +302,7 @@
             "traitName": "Conformists",
             "traitImage": "trait_conformists.png",
             "traitCost": 1,
-            "excludes": ["Deviants"]
+            "excludes": ["Deviants", "Invasive Species"]
           },
           {
             "traitName": "Deviants",
@@ -310,13 +319,13 @@
             "traitName": "Venerable",
             "traitImage": "trait_venerable.png",
             "traitCost": 4,
-            "excludes": ["Enduring", "Fleeting"]
+            "excludes": ["Enduring", "Fleeting", "Invasive Species"]
           },
           {
             "traitName": "Enduring",
             "traitImage": "trait_enduring.png",
             "traitCost": 1,
-            "excludes": ["Venerable", "Fleeting"]
+            "excludes": ["Venerable", "Fleeting", "Invasive Species"]
           },
           {
             "traitName": "Fleeting",
@@ -333,7 +342,7 @@
             "traitName": "Conservationist",
             "traitImage": "trait_conservational.png",
             "traitCost": 1,
-            "excludes": ["Wasteful"]
+            "excludes": ["Wasteful", "Invasive Species"]
           },
           {
             "traitName": "Wasteful",
@@ -346,14 +355,356 @@
     ]
   },
   {
-    "traitGroup": "Machine",
+    "traitArchetype": "Machine",
     "url": "/images/traits/mechanical/",
+    "excludedArchetype": ["Organic", "Botanical", "Lithoid"],
     "requiredTrait": { 
       "traitName": "Machine", 
       "traitImage": "/images/traits/mechanical/trait_machine_unit.png", 
-      "traitCost": 0
+      "traitCost": 0,
+      "excludes": []
     },
-    "traits": [
+    "archetypeTraits": [
+      {
+        "traitGroup": "Individual Group",
+        "traits": [
+          {
+            "traitName": "Power Drills",
+            "traitImage": "trait_robot_power_drills.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Harvesters",
+            "traitImage": "trait_robot_harvesters.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Superconductive",
+            "traitImage": "trait_robot_superconductive.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Efficient Processors",
+            "traitImage": "trait_robot_efficient_processors.png",
+            "traitCost": 3,
+            "excludes": []
+          },
+          {
+            "traitName": "Logic Engines",
+            "traitImage": "trait_robot_logic_engines.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Enhanced Memory",
+            "traitImage": "trait_robot_enhanced_memory.png",
+            "traitCost": 2,
+            "excludes": []
+          }
+        ]
+      },
+      {
+        "traitGroup": "Housing Group",
+        "traits": [
+          {
+            "traitName": "Double-Jointed",
+            "traitImage": "trait_robot_double_jointed.png",
+            "traitCost": 1,
+            "excludes": ["Bulky"]
+          },
+          {
+            "traitName": "Bulky",
+            "traitImage": "trait_robot_bulky.png",
+            "traitCost": -1,
+            "excludes": ["Double-Jointed"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Amenities Group",
+        "traits": [
+          {
+            "traitName": "Emotion Emulators",
+            "traitImage": "trait_robot_emotion_emulators.png",
+            "traitCost": 1,
+            "excludes": ["Uncanny"]
+          },
+          {
+            "traitName": "Uncanny",
+            "traitImage": "trait_robot_uncany.png",
+            "traitCost": -1,
+            "excludes": ["Emotion Emulators"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Upkeep Group",
+        "traits": [
+          {
+            "traitName": "Durable",
+            "traitImage": "trait_robot_durable.png",
+            "traitCost": 1,
+            "excludes": ["High Maintenance"]
+          },
+          {
+            "traitName": "High Maintenance",
+            "traitImage": "trait_robot_high_maintenance.png",
+            "traitCost": -1,
+            "excludes": ["Durable"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Experience Group",
+        "traits": [
+          {
+            "traitName": "Learning Algorithms",
+            "traitImage": "trait_robot_learning_algorithms.png",
+            "traitCost": 1,
+            "excludes": ["Repurposed Hardware"]
+          },
+          {
+            "traitName": "Repurposed Hardware",
+            "traitImage": "trait_robot_repurposed_hardware.png",
+            "traitCost": -1,
+            "excludes": ["Learning Algorithms"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Growth Group",
+        "traits": [
+          {
+            "traitName": "Mass-Produced",
+            "traitImage": "trait_robot_mass_produced.png",
+            "traitCost": 1,
+            "excludes": ["Custom-Made"]
+          },
+          {
+            "traitName": "Custom-Made",
+            "traitImage": "trait_robot_custom_made.png",
+            "traitCost": -1,
+            "excludes": ["Mass-Produced"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Assembly Group",
+        "traits": [
+          {
+            "traitName": "Recycled",
+            "traitImage": "trait_robot_recycled.png",
+            "traitCost": 2,
+            "excludes": ["Luxurious"]
+          },
+          {
+            "traitName": "Luxurious",
+            "traitImage": "trait_robot_luxurious.png",
+            "traitCost": -2,
+            "excludes": ["Recycled"]
+          }
+        ]
+      },
+      {
+        "traitGroup": "Empire Size Group",
+        "traits": [
+          {
+            "traitName": "Streamlined Protocols",
+            "traitImage": "trait_robot_streamlined_protocols.png",
+            "traitCost": 2,
+            "excludes": ["High Bandwith"]
+          },
+          {
+            "traitName": "High Bandwith",
+            "traitImage": "trait_robot_high_bandwith.png",
+            "traitCost": -2,
+            "excludes": ["Streamlined Protocols"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "traitArchetype": "Lithoid",
+    "url": "/images/traits/lithoid/",
+    "excludedArchetype": ["Machine", "Botanical"],
+    "requiredTrait": {
+      "traitName": "Lithoid",
+      "traitImage": "/images/traits/lithoid/trait_lithoid.png",
+      "traitCost": 0,
+      "excludes": ["Rapid Breeders", "Slow Breeders"]
+    },
+    "archetypeTraits": [
+      {
+        "traitGroup": "Lithoid Group",
+        "traits": [
+          {
+            "traitName": "Scintillating Skin",
+            "traitImage": "trait_lithoid_scintillating.png",
+            "traitCost": 2,
+            "excludes": ["Gaseous Byproducts", "Volatile Excretions"]
+          },
+          {
+            "traitName": "Gaseous Byproducts",
+            "traitImage": "trait_lithoid_gaseous_byproducts.png",
+            "traitCost": 2,
+            "excludes": ["Scintillating Skin", "Volatile Excretions"]
+          },
+          {
+            "traitName": "Volatile Excretions",
+            "traitImage": "trait_lithoid_volatile_excretions.png",
+            "traitCost": 2,
+            "excludes": ["Scintillating Skin", "Gaseous Byproducts"]
+          },
+          {
+            "traitName": "Crystallization",
+            "traitImage": "trait_lithoid_budding.png",
+            "traitCost": 2,
+            "excludes": ["Existential Iteroparity", "Incubators"]
+          },
+          {
+            "traitName": "Radiotrophic",
+            "traitImage": "trait_lithoid_radiotrophic.png",
+            "traitCost": 2,
+            "excludes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "traitArchetype": "Overtuned",
+    "url": "/images/traits/overtuned/",
+    "excludedArchetype": ["Machine", "Botanical"],
+    "archetypeTraits": [
+      {
+        "traitGroup": "Overtuned Group",
+        "traits": [
+          {
+            "traitName": "Spliced Adaptability",
+            "traitImage": "trait_spliced_adaptability.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Juiced Power",
+            "traitImage": "trait_juiced_power.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Farm Appendages",
+            "traitImage": "trait_farm_hands.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Dedicated Miner",
+            "traitImage": "trait_crack_miner.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Technical Talent",
+            "traitImage": "trait_technical_skill.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Crafted Smiles",
+            "traitImage": "trait_cra.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Low Maintenance",
+            "traitImage": "trait_low_maintenance.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Augmented Intelligence",
+            "traitImage": "trait_augmented_intelligence.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Gene Mentorship",
+            "traitImage": "trait_gene_mentorship.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Expressed Tradition",
+            "traitImage": "trait_expresed_tradition.png",
+            "traitCost": 1,
+            "excludes": []
+          },
+          {
+            "traitName": "Elevated Synapses",
+            "traitImage": "trait_elevated_synapses.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Pre-Planned Growth",
+            "traitImage": "trait_preplanned_growth.png",
+            "traitCost": 2,
+            "excludes": []
+          },
+          {
+            "traitName": "Excessive Endurance",
+            "traitImage": "trait_excessive_endurance.png",
+            "traitCost": 3,
+            "excludes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "traitArchetype": "Botanical",
+    "url": "/images/traits/botanical/",
+    "excludedArchetype": ["Machine", "Lithoid"],
+    "archetypeTraits": [
+      {
+        "traitGroup": "Botanical Group",
+        "traits": [
+          {
+            "traitName": "Phototrophic",
+            "traitImage": "trait_plantoid_phototrophic.png",
+            "traitCost": 1,
+            "excludes": ["Radiotrophic"]
+          },
+          {
+            "traitName": "Radiotrophic",
+            "traitImage": "trait_plantoid_radiotrophic.png",
+            "traitCost": 2,
+            "excludes": ["Phototrophic"]
+          },
+          {
+            "traitName": "Budding",
+            "traitImage": "trait_plantoid_budding.png",
+            "traitCost": 2,
+            "excludes": ["Rapid Breeders", "Slow Breeders", "Incubators", "Existential Iteroparity"]
+          },
+          {
+            "traitName": "Invasive Species",
+            "traitImage": "trait_plantoid_invasive_species.png",
+            "traitCost": 2,
+            "excludes": ["Agrarian", "Ingenious", "Industrious", "Intelligent", "Thrifty",
+              "Natural Engineers", "Natural Physicists", "Natural Sociologists", "Extremely Adaptive",
+              "Adaptive", "Rapid Breeders", "Talented", "Quick Learners", "Traditional",
+              "Docile", "Very Strong", "Strong", "Nomadic", "Communal", "Charismatic",
+              "Conformists", "Venerable", "Enduring", "Resilient", "Conservationist",
+              "Existential Iteroparity", "Incubators", "Inorganic Breath", "Noxious"
+            ]
+          }
+        ]
+      }
     ]
   }
 ]
