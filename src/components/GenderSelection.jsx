@@ -46,7 +46,7 @@ const GenderSelection = ({ handleGenderClick }) => {
 
     const getParamsFromURL = () => {
       const params = new URLSearchParams(window.location.search);
-      const genderParam = params.get('uG');
+      const genderParam = params.get('sG');
       const speciesParam = params.get('sN');
       if (speciesParam === 'Machine') {
         setIsMachine(true);
@@ -76,10 +76,10 @@ const GenderSelection = ({ handleGenderClick }) => {
 
       if (prevGender === gender) {
         newGender = 'default';
-        params.delete('uG');
+        params.delete('sG');
       } else {
         newGender = gender;
-        params.set('uG', gender);
+        params.set('sG', gender);
       }
 
       window.history.replaceState({}, '', `?${params.toString()}`);

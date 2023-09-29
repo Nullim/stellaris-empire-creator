@@ -7,8 +7,6 @@ export default function SpeciesName() {
   const [namePlural, setNamePlural] = useState("");
   const [gender, setGender] = useState("default")
 
-  console.log(gender) // Track gender value. Remove this before final release.
-
   useEffect(() => {
     const getParamsFromURL = () => {
       const params = new URLSearchParams(window.location.search);
@@ -26,8 +24,13 @@ export default function SpeciesName() {
   const changeName = (e) => {
     const newName = e.target.value;
     setName(newName);
-
     const params = new URLSearchParams(window.location.search);
+    
+    if (newName === "") {
+      params.delete('uN');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      return;
+    }
     params.set('uN', newName);
     window.history.replaceState({}, '', `?${params.toString()}`);
   }
@@ -37,6 +40,11 @@ export default function SpeciesName() {
     setNamePlural(newPlural);
 
     const params = new URLSearchParams(window.location.search);
+    if (newPlural === "") {
+      params.delete('uP');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      return;
+    }
     params.set('uP', newPlural);
     window.history.replaceState({}, '', `?${params.toString()}`);
   }
@@ -46,6 +54,11 @@ export default function SpeciesName() {
     setAdjective(newAdjective);
 
     const params = new URLSearchParams(window.location.search);
+    if (newAdjective === "") {
+      params.delete('uA');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      return;
+    }
     params.set('uA', newAdjective);
     window.history.replaceState({}, '', `?${params.toString()}`);
   }

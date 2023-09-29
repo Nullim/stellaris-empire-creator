@@ -18,7 +18,7 @@ export default function App() {
     <div className="relative overflow-hidden font-gothic flex flex-col box-border">
       <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" alt="Background Image" />
       <div className="absolute w-full h-full inset-0 flex flex-col mt-8 justify-start items-center">
-        <div className="hidden lg:flex justify-center items-end w-11/12 bg-black/40 backdrop-blur-sm border-b border-green-700 z-10">
+        <div className="hidden lg:flex justify-center items-end w-11/12 bg-black/50 backdrop-blur-sm border-b border-green-700 z-10">
           <TabsBar 
             tabs={tabsData} 
             activeTab={activeTab} 
@@ -26,7 +26,7 @@ export default function App() {
             onMenuItemSelect={handleMenuItemSelect}
           />
         </div>
-        <div className="w-11/12 h-5/6 bg-black/40 text-white backdrop-blur-sm flex flex-col z-0">
+        <div className="w-11/12 h-5/6 bg-black/50 text-white backdrop-blur-sm flex flex-col z-0">
           <div className="h-1/2 text-center">
             <EmpireDisplay />
           </div>

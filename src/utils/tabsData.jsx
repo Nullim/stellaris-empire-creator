@@ -3,7 +3,8 @@ import About from "../pages/home/About";
 import SpeciesPortraits from "../pages/species/SpeciesPortraits";
 import SpeciesName from "../pages/species/SpeciesName";
 import SpeciesTraits from "../pages/species/SpeciesTraits";
-import Homeworld from "../pages/government/Homeworld";
+import Planet from "../pages/government/Planet";
+import City from "../pages/government/City";
 
 const tabsData = [
   {
@@ -21,9 +22,10 @@ const tabsData = [
     ],
   },
   {
-    label: "Government",
+    label: "Homeworld",
     menuItem: [
-      { menuLabel: "Homeworld", content: <Homeworld />},
+      { menuLabel: "Planet", content: <Planet />},
+      { menuLabel: "City Appearance", content: <City />}
     ]
   },
 ];

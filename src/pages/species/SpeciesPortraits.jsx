@@ -19,7 +19,7 @@ export default function SpeciesPortraits() {
           setSelectedSpeciesData(foundSpecies);
           setSelectedPortrait(portraitParam);
           if (speciesParam === 'Machine' && genderParam) {
-            params.delete('uG');
+            params.delete('sG');
             window.history.replaceState({}, '', `?${params.toString()}`);
           }
         }
@@ -40,7 +40,7 @@ export default function SpeciesPortraits() {
     params.set('sN', selectedSpeciesData.name);
     params.set('sP', portrait);
     if (params.get('sN') === 'Machine') {
-      params.delete('uG');
+      params.delete('sG');
     }
     window.history.replaceState({}, '', `?${params.toString()}`)
   }
