@@ -4,942 +4,721 @@
   "lithoidUrl": "/images/traits/lithoid/",
   "overtunedUrl": "/images/traits/overtuned/",
   "botanicalUrl": "/images/traits/botanical/",
-  "traitList": [
+  "traits": [
     {
-      "traitGroup": "Individual Group",
-      "traits": [
-        {
-          "traitId": 1,
-          "traitName": "Aquatic",
-          "traitImage": "trait_aquatic.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": []
-        },
-        {
-          "traitId": 2,
-          "traitName": "Agrarian",
-          "traitImage": "trait_agrarian.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 3,
-          "traitName": "Ingenious",
-          "traitImage": "trait_ingenious.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 4,
-          "traitName": "Industrious",
-          "traitImage": "trait_industrious.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 5,
-          "traitName": "Intelligent",
-          "traitImage": "trait_intelligent.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 6,
-          "traitName": "Thrifty",
-          "traitImage": "trait_thrifty.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 7,
-          "traitName": "Natural Engineers",
-          "traitImage": "trait_natural_engineers.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Natural Physicists",
-            "Natural Sociologists",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 8,
-          "traitName": "Natural Physicists",
-          "traitImage": "trait_natural_physicists.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Natural Engineers",
-            "Natural Sociologists",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 9,
-          "traitName": "Natural Sociologists",
-          "traitImage": "trait_natural_sociologists.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Natural Engineers",
-            "Natural Physicists",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 10,
-          "traitName": "Extremely Adaptive",
-          "traitImage": "trait_extremely_adaptive.png",
-          "traitCost": 4,
-          "type": "Organic",
-          "excludes": [
-            "Adaptive",
-            "Nonadaptive",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 11,
-          "traitName": "Adaptive",
-          "traitImage": "trait_adaptive.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Extremely Adaptive",
-            "Nonadaptive",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 12,
-          "traitName": "Nonadaptive",
-          "traitImage": "trait_nonadaptive.png",
-          "traitCost": -2,
-          "type": "Organic",
-          "excludes": [
-            "Extremely Adaptive",
-            "Adaptive"
-          ]
-        },
-        {
-          "traitId": 13,
-          "traitName": "Rapid Breeders",
-          "traitImage": "trait_rapid_breeders.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Slow Breeders",
-            "Incubators",
-            "Existential Iteroparity",
-            "Budding",
-            "Invasive Species",
-            "Lithoid"
-          ]
-        },
-        {
-          "traitId": 14,
-          "traitName": "Slow Breeders",
-          "traitImage": "trait_slow_breeders.png",
-          "traitCost": -2,
-          "type": "Organic",
-          "excludes": [
-            "Rapid Breeders",
-            "Incubators",
-            "Psychological Infertility",
-            "Existential Iteroparity",
-            "Budding",
-            "Lithoid"
-          ]
-        },
-        {
-          "traitId": 15,
-          "traitName": "Incubators",
-          "traitImage": "trait_incubator.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Rapid Breeders",
-            "Slow Breeders",
-            "Existential Iteroparity",
-            "Budding",
-            "Invasive Species",
-            "Crystallization"
-          ]
-        },
-        {
-          "traitId": 16,
-          "traitName": "Existential Iteroparity",
-          "traitImage": "trait_existential_iteroparity.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Rapid Breeders",
-            "Slow Breeders",
-            "Psychological Infertility",
-            "Incubators",
-            "Budding",
-            "Invasive Species",
-            "Crystallization"
-          ]
-        },
-        {
-          "traitId": 17,
-          "traitName": "Psychological Infertility",
-          "traitImage": "trait_psychological_infertility.png",
-          "traitCost": -2,
-          "type": "Organic",
-          "excludes": [
-            "Slow Breeders",
-            "Existential Iteroparity"
-          ]
-        },
-        {
-          "traitId": 18,
-          "traitName": "Talented",
-          "traitImage": "trait_talented.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Jinxed",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 19,
-          "traitName": "Jinxed",
-          "traitImage": "trait_jinxed.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Talented"
-          ]
-        },
-        {
-          "traitId": 20,
-          "traitName": "Quick Learners",
-          "traitImage": "trait_quick_learners.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Slow Learners",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 21,
-          "traitName": "Slow Learners",
-          "traitImage": "trait_slow_learners.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Quick Learners"
-          ]
-        },
-        {
-          "traitId": 22,
-          "traitName": "Traditional",
-          "traitImage": "trait_traditional.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Quarrelsome",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 23,
-          "traitName": "Quarrelsome",
-          "traitImage": "trait_quarrelsome.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Traditional"
-          ]
-        },
-        {
-          "traitId": 24,
-          "traitName": "Docile",
-          "traitImage": "trait_docile.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Unruly",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 25,
-          "traitName": "Unruly",
-          "traitImage": "trait_unruly.png",
-          "traitCost": -2,
-          "type": "Organic",
-          "excludes": [
-            "Docile"
-          ]
-        },
-        {
-          "traitId": 26,
-          "traitName": "Very Strong",
-          "traitImage": "trait_very_strong.png",
-          "traitCost": 3,
-          "type": "Organic",
-          "excludes": [
-            "Strong",
-            "Weak",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 27,
-          "traitName": "Strong",
-          "traitImage": "trait_strong.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Very Strong",
-            "Weak",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 28,
-          "traitName": "Weak",
-          "traitImage": "trait_weak.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Very Strong",
-            "Strong"
-          ]
-        },
-        {
-          "traitId": 29,
-          "traitName": "Nomadic",
-          "traitImage": "trait_nomadic.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Sedentary",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 30,
-          "traitName": "Sedentary",
-          "traitImage": "trait_sedentary.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Nomadic"
-          ]
-        },
-        {
-          "traitId": 31,
-          "traitName": "Communal",
-          "traitImage": "trait_communal.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Solitary",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 32,
-          "traitName": "Solitary",
-          "traitImage": "trait_solitary.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Communal"
-          ]
-        },
-        {
-          "traitId": 33,
-          "traitName": "Charismatic",
-          "traitImage": "trait_charismatic.png",
-          "traitCost": 2,
-          "type": "Organic",
-          "excludes": [
-            "Repugnant",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 34,
-          "traitName": "Repugnant",
-          "traitImage": "trait_repugnant.png",
-          "traitCost": -2,
-          "type": "Organic",
-          "excludes": [
-            "Charismatic"
-          ]
-        },
-        {
-          "traitId": 35,
-          "traitName": "Conformists",
-          "traitImage": "trait_conformists.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Deviants",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 36,
-          "traitName": "Deviants",
-          "traitImage": "trait_deviants.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Conformists"
-          ]
-        },
-        {
-          "traitId": 37,
-          "traitName": "Venerable",
-          "traitImage": "trait_venerable.png",
-          "traitCost": 4,
-          "type": "Organic",
-          "excludes": [
-            "Enduring",
-            "Fleeting",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 38,
-          "traitName": "Enduring",
-          "traitImage": "trait_enduring.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Venerable",
-            "Fleeting",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 39,
-          "traitName": "Fleeting",
-          "traitImage": "trait_fleeting.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Venerable",
-            "Enduring"
-          ]
-        },
-        {
-          "traitId": 40,
-          "traitName": "Decadent",
-          "traitImage": "trait_decadent.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": []
-        },
-        {
-          "traitId": 41,
-          "traitName": "Resilient",
-          "traitImage": "trait_resilient.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 42,
-          "traitName": "Conservationist",
-          "traitImage": "trait_conservational.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Wasteful",
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 43,
-          "traitName": "Wasteful",
-          "traitImage": "trait_wasteful.png",
-          "traitCost": -1,
-          "type": "Organic",
-          "excludes": [
-            "Conservationist"
-          ]
-        },
-        {
-          "traitId": 44,
-          "traitName": "Inorganic Breath",
-          "traitImage": "trait_inorganic_breath.png",
-          "traitCost": 3,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 45,
-          "traitName": "Noxious",
-          "traitImage": "trait_noxious.png",
-          "traitCost": 1,
-          "type": "Organic",
-          "excludes": [
-            "Invasive Species"
-          ]
-        },
-        {
-          "traitId": 46,
-          "traitName": "Machine",
-          "traitImage": "trait_machine_unit.png",
-          "traitCost": 0,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 47,
-          "traitName": "Power Drills",
-          "traitImage": "trait_robot_power_drills.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 48,
-          "traitName": "Harvesters",
-          "traitImage": "trait_robot_harvesters.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 49,
-          "traitName": "Superconductive",
-          "traitImage": "trait_robot_superconductive.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 50,
-          "traitName": "Efficient Processors",
-          "traitImage": "trait_robot_efficient_processors.png",
-          "traitCost": 3,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 51,
-          "traitName": "Logic Engines",
-          "traitImage": "trait_robot_logic_engines.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 52,
-          "traitName": "Enhanced Memory",
-          "traitImage": "trait_robot_enhanced_memory.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": []
-        },
-        {
-          "traitId": 53,
-          "traitName": "Double-Jointed",
-          "traitImage": "trait_robot_double_jointed.png",
-          "traitCost": 1,
-          "type": "Machine",
-          "excludes": [
-            "Bulky"
-          ]
-        },
-        {
-          "traitId": 54,
-          "traitName": "Bulky",
-          "traitImage": "trait_robot_bulky.png",
-          "traitCost": -1,
-          "type": "Machine",
-          "excludes": [
-            "Double-Jointed"
-          ]
-        },
-        {
-          "traitId": 55,
-          "traitName": "Emotion Emulators",
-          "traitImage": "trait_robot_emotion_emulators.png",
-          "traitCost": 1,
-          "type": "Machine",
-          "excludes": [
-            "Uncanny"
-          ]
-        },
-        {
-          "traitId": 56,
-          "traitName": "Uncanny",
-          "traitImage": "trait_robot_uncanny.png",
-          "traitCost": -1,
-          "type": "Machine",
-          "excludes": [
-            "Emotion Emulators"
-          ]
-        },
-        {
-          "traitId": 57,
-          "traitName": "Durable",
-          "traitImage": "trait_robot_durable.png",
-          "traitCost": 1,
-          "type": "Machine",
-          "excludes": [
-            "High Maintenance"
-          ]
-        },
-        {
-          "traitId": 58,
-          "traitName": "High Maintenance",
-          "traitImage": "trait_robot_high_maintenance.png",
-          "traitCost": -1,
-          "type": "Machine",
-          "excludes": [
-            "Durable"
-          ]
-        },
-        {
-          "traitId": 59,
-          "traitName": "Learning Algorithms",
-          "traitImage": "trait_robot_learning_algorithms.png",
-          "traitCost": 1,
-          "type": "Machine",
-          "excludes": [
-            "Repurposed Hardware"
-          ]
-        },
-        {
-          "traitId": 60,
-          "traitName": "Repurposed Hardware",
-          "traitImage": "trait_robot_repurposed_hardware.png",
-          "traitCost": -1,
-          "type": "Machine",
-          "excludes": [
-            "Learning Algorithms"
-          ]
-        },
-        {
-          "traitId": 61,
-          "traitName": "Mass-Produced",
-          "traitImage": "trait_robot_mass_produced.png",
-          "traitCost": 1,
-          "type": "Machine",
-          "excludes": [
-            "Custom-Made"
-          ]
-        },
-        {
-          "traitId": 62,
-          "traitName": "Custom-Made",
-          "traitImage": "trait_robot_custom_made.png",
-          "traitCost": -1,
-          "type": "Machine",
-          "excludes": [
-            "Mass-Produced"
-          ]
-        },
-        {
-          "traitId": 63,
-          "traitName": "Recycled",
-          "traitImage": "trait_robot_recycled.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": [
-            "Luxurious"
-          ]
-        },
-        {
-          "traitId": 64,
-          "traitName": "Luxurious",
-          "traitImage": "trait_robot_luxurious.png",
-          "traitCost": -2,
-          "type": "Machine",
-          "excludes": [
-            "Recycled"
-          ]
-        },
-        {
-          "traitId": 65,
-          "traitName": "Streamlined Protocols",
-          "traitImage": "trait_robot_streamlined_protocols.png",
-          "traitCost": 2,
-          "type": "Machine",
-          "excludes": [
-            "High Bandwith"
-          ]
-        },
-        {
-          "traitId": 66,
-          "traitName": "High Bandwith",
-          "traitImage": "trait_robot_high_bandwidth.png",
-          "traitCost": -2,
-          "type": "Machine",
-          "excludes": [
-            "Streamlined Protocols"
-          ]
-        },
-        {
-          "traitId": 67,
-          "traitName": "Lithoid",
-          "traitImage": "trait_lithoid.png",
-          "traitCost": 0,
-          "type": "Lithoid",
-          "excludes": [
-            "Rapid Breeders",
-            "Slow Breeders"
-          ]
-        },
-        {
-          "traitId": 68,
-          "traitName": "Scintillating Skin",
-          "traitImage": "trait_lithoid_scintillating.png",
-          "traitCost": 2,
-          "type": "Lithoid",
-          "excludes": [
-            "Gaseous Byproducts",
-            "Volatile Excretions"
-          ]
-        },
-        {
-          "traitId": 69,
-          "traitName": "Gaseous Byproducts",
-          "traitImage": "trait_lithoid_gaseous_byproducts.png",
-          "traitCost": 2,
-          "type": "Lithoid",
-          "excludes": [
-            "Scintillating Skin",
-            "Volatile Excretions"
-          ]
-        },
-        {
-          "traitId": 70,
-          "traitName": "Volatile Excretions",
-          "traitImage": "trait_lithoid_volatile_excretions.png",
-          "traitCost": 2,
-          "type": "Lithoid",
-          "excludes": [
-            "Scintillating Skin",
-            "Gaseous Byproducts"
-          ]
-        },
-        {
-          "traitId": 71,
-          "traitName": "Crystallization",
-          "traitImage": "trait_lithoid_budding.png",
-          "traitCost": 2,
-          "type": "Lithoid",
-          "excludes": [
-            "Existential Iteroparity",
-            "Incubators"
-          ]
-        },
-        {
-          "traitId": 72,
-          "traitName": "Radiotrophic",
-          "traitImage": "trait_lithoid_radiotrophic.png",
-          "traitCost": 2,
-          "type": "Lithoid",
-          "excludes": []
-        },
-        {
-          "traitId": 73,
-          "traitName": "Spliced Adaptability",
-          "traitImage": "trait_spliced_adaptability.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 74,
-          "traitName": "Juiced Power",
-          "traitImage": "trait_juiced_power.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 75,
-          "traitName": "Farm Appendages",
-          "traitImage": "trait_farm_hands.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 76,
-          "traitName": "Dedicated Miner",
-          "traitImage": "trait_crack_miner.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 77,
-          "traitName": "Technical Talent",
-          "traitImage": "trait_technical_skill.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 78,
-          "traitName": "Crafted Smiles",
-          "traitImage": "trait_cra.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 79,
-          "traitName": "Low Maintenance",
-          "traitImage": "trait_low_maintenance.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 80,
-          "traitName": "Augmented Intelligence",
-          "traitImage": "trait_augmented_intelligence.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 81,
-          "traitName": "Gene Mentorship",
-          "traitImage": "trait_gene_mentorship.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 82,
-          "traitName": "Expressed Tradition",
-          "traitImage": "trait_expresed_tradition.png",
-          "traitCost": 1,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 83,
-          "traitName": "Elevated Synapses",
-          "traitImage": "trait_elevated_synapses.png",
-          "traitCost": 2,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 84,
-          "traitName": "Pre-Planned Growth",
-          "traitImage": "trait_preplanned_growth.png",
-          "traitCost": 2,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 85,
-          "traitName": "Excessive Endurance",
-          "traitImage": "trait_excessive_endurance.png",
-          "traitCost": 3,
-          "type": "Overtuned",
-          "excludes": []
-        },
-        {
-          "traitId": 86,
-          "traitName": "Phototrophic",
-          "traitImage": "trait_plantoid_phototrophic.png",
-          "traitCost": 1,
-          "type": "Botanical",
-          "excludes": [
-            "Radiotrophic"
-          ]
-        },
-        {
-          "traitId": 87,
-          "traitName": "Radiotrophic",
-          "traitImage": "trait_plantoid_radiotrophic.png",
-          "traitCost": 2,
-          "type": "Botanical",
-          "excludes": [
-            "Phototrophic"
-          ]
-        },
-        {
-          "traitId": 88,
-          "traitName": "Budding",
-          "traitImage": "trait_plantoid_budding.png",
-          "traitCost": 2,
-          "type": "Botanical",
-          "excludes": [
-            "Rapid Breeders",
-            "Slow Breeders",
-            "Incubators",
-            "Existential Iteroparity"
-          ]
-        },
-        {
-          "traitId": 89,
-          "traitName": "Invasive Species",
-          "traitImage": "trait_plantoid_invasive_species.png",
-          "traitCost": 2,
-          "type": "Botanical",
-          "excludes": [
-            "Agrarian",
-            "Ingenious",
-            "Industrious",
-            "Intelligent",
-            "Thrifty",
-            "Natural Engineers",
-            "Natural Physicists",
-            "Natural Sociologists",
-            "Extremely Adaptive",
-            "Adaptive",
-            "Rapid Breeders",
-            "Talented",
-            "Quick Learners",
-            "Traditional",
-            "Docile",
-            "Very Strong",
-            "Strong",
-            "Nomadic",
-            "Communal",
-            "Charismatic",
-            "Conformists",
-            "Venerable",
-            "Enduring",
-            "Resilient",
-            "Conservationist",
-            "Existential Iteroparity",
-            "Incubators",
-            "Inorganic Breath",
-            "Noxious"
-          ]
-        }
+      "traitId": 1,
+      "traitName": "Aquatic",
+      "traitImage": "trait_aquatic.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": []
+    },
+    {
+      "traitId": 2,
+      "traitName": "Agrarian",
+      "traitImage": "trait_agrarian.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 3,
+      "traitName": "Ingenious",
+      "traitImage": "trait_ingenious.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 4,
+      "traitName": "Industrious",
+      "traitImage": "trait_industrious.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 5,
+      "traitName": "Intelligent",
+      "traitImage": "trait_intelligent.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 6,
+      "traitName": "Thrifty",
+      "traitImage": "trait_thrifty.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 7,
+      "traitName": "Natural Engineers",
+      "traitImage": "trait_natural_engineers.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [8, 9, 89]
+    },
+    {
+      "traitId": 8,
+      "traitName": "Natural Physicists",
+      "traitImage": "trait_natural_physicists.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [7, 9, 89]
+    },
+    {
+      "traitId": 9,
+      "traitName": "Natural Sociologists",
+      "traitImage": "trait_natural_sociologists.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [7, 8, 89]
+    },
+    {
+      "traitId": 10,
+      "traitName": "Extremely Adaptive",
+      "traitImage": "trait_extremely_adaptive.png",
+      "traitCost": 4,
+      "type": "Organic",
+      "excludes": [11, 12, 89]
+    },
+    {
+      "traitId": 11,
+      "traitName": "Adaptive",
+      "traitImage": "trait_adaptive.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [10, 12, 89]
+    },
+    {
+      "traitId": 12,
+      "traitName": "Nonadaptive",
+      "traitImage": "trait_nonadaptive.png",
+      "traitCost": -2,
+      "type": "Organic",
+      "excludes": [11, 12]
+    },
+    {
+      "traitId": 13,
+      "traitName": "Rapid Breeders",
+      "traitImage": "trait_rapid_breeders.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [14, 15, 16, 67, 88, 89]
+    },
+    {
+      "traitId": 14,
+      "traitName": "Slow Breeders",
+      "traitImage": "trait_slow_breeders.png",
+      "traitCost": -2,
+      "type": "Organic",
+      "excludes": [13, 15, 16, 17, 67, 88]
+    },
+    {
+      "traitId": 15,
+      "traitName": "Incubators",
+      "traitImage": "trait_incubator.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [13, 14, 16, 71, 88, 89]
+    },
+    {
+      "traitId": 16,
+      "traitName": "Existential Iteroparity",
+      "traitImage": "trait_existential_iteroparity.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [13, 14, 15, 17, 71, 88, 89]
+    },
+    {
+      "traitId": 17,
+      "traitName": "Psychological Infertility",
+      "traitImage": "trait_psychological_infertility.png",
+      "traitCost": -2,
+      "type": "Organic",
+      "excludes": [14, 16]
+    },
+    {
+      "traitId": 18,
+      "traitName": "Talented",
+      "traitImage": "trait_talented.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [19, 89]
+    },
+    {
+      "traitId": 19,
+      "traitName": "Jinxed",
+      "traitImage": "trait_jinxed.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [18]
+    },
+    {
+      "traitId": 20,
+      "traitName": "Quick Learners",
+      "traitImage": "trait_quick_learners.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [21, 89]
+    },
+    {
+      "traitId": 21,
+      "traitName": "Slow Learners",
+      "traitImage": "trait_slow_learners.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [20]
+    },
+    {
+      "traitId": 22,
+      "traitName": "Traditional",
+      "traitImage": "trait_traditional.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [23, 89]
+    },
+    {
+      "traitId": 23,
+      "traitName": "Quarrelsome",
+      "traitImage": "trait_quarrelsome.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [22]
+    },
+    {
+      "traitId": 24,
+      "traitName": "Docile",
+      "traitImage": "trait_docile.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [25, 89]
+    },
+    {
+      "traitId": 25,
+      "traitName": "Unruly",
+      "traitImage": "trait_unruly.png",
+      "traitCost": -2,
+      "type": "Organic",
+      "excludes": [24]
+    },
+    {
+      "traitId": 26,
+      "traitName": "Very Strong",
+      "traitImage": "trait_very_strong.png",
+      "traitCost": 3,
+      "type": "Organic",
+      "excludes": [27, 28, 89]
+    },
+    {
+      "traitId": 27,
+      "traitName": "Strong",
+      "traitImage": "trait_strong.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [26, 28, 89]
+    },
+    {
+      "traitId": 28,
+      "traitName": "Weak",
+      "traitImage": "trait_weak.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [26, 27]
+    },
+    {
+      "traitId": 29,
+      "traitName": "Nomadic",
+      "traitImage": "trait_nomadic.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [30, 89]
+    },
+    {
+      "traitId": 30,
+      "traitName": "Sedentary",
+      "traitImage": "trait_sedentary.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [29]
+    },
+    {
+      "traitId": 31,
+      "traitName": "Communal",
+      "traitImage": "trait_communal.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [32, 89]
+    },
+    {
+      "traitId": 32,
+      "traitName": "Solitary",
+      "traitImage": "trait_solitary.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [31]
+    },
+    {
+      "traitId": 33,
+      "traitName": "Charismatic",
+      "traitImage": "trait_charismatic.png",
+      "traitCost": 2,
+      "type": "Organic",
+      "excludes": [34, 89]
+    },
+    {
+      "traitId": 34,
+      "traitName": "Repugnant",
+      "traitImage": "trait_repugnant.png",
+      "traitCost": -2,
+      "type": "Organic",
+      "excludes": [33]
+    },
+    {
+      "traitId": 35,
+      "traitName": "Conformists",
+      "traitImage": "trait_conformists.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [36, 89]
+    },
+    {
+      "traitId": 36,
+      "traitName": "Deviants",
+      "traitImage": "trait_deviants.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [35]
+    },
+    {
+      "traitId": 37,
+      "traitName": "Venerable",
+      "traitImage": "trait_venerable.png",
+      "traitCost": 4,
+      "type": "Organic",
+      "excludes": [38, 39, 89]
+    },
+    {
+      "traitId": 38,
+      "traitName": "Enduring",
+      "traitImage": "trait_enduring.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [37, 39, 89]
+    },
+    {
+      "traitId": 39,
+      "traitName": "Fleeting",
+      "traitImage": "trait_fleeting.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [37, 38]
+    },
+    {
+      "traitId": 40,
+      "traitName": "Decadent",
+      "traitImage": "trait_decadent.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": []
+    },
+    {
+      "traitId": 41,
+      "traitName": "Resilient",
+      "traitImage": "trait_resilient.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 42,
+      "traitName": "Conservationist",
+      "traitImage": "trait_conservational.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [43, 89]
+    },
+    {
+      "traitId": 43,
+      "traitName": "Wasteful",
+      "traitImage": "trait_wasteful.png",
+      "traitCost": -1,
+      "type": "Organic",
+      "excludes": [42]
+    },
+    {
+      "traitId": 44,
+      "traitName": "Inorganic Breath",
+      "traitImage": "trait_inorganic_breath.png",
+      "traitCost": 3,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 45,
+      "traitName": "Noxious",
+      "traitImage": "trait_noxious.png",
+      "traitCost": 1,
+      "type": "Organic",
+      "excludes": [89]
+    },
+    {
+      "traitId": 46,
+      "traitName": "Machine",
+      "traitImage": "trait_machine_unit.png",
+      "traitCost": 0,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 47,
+      "traitName": "Power Drills",
+      "traitImage": "trait_robot_power_drills.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 48,
+      "traitName": "Harvesters",
+      "traitImage": "trait_robot_harvesters.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 49,
+      "traitName": "Superconductive",
+      "traitImage": "trait_robot_superconductive.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 50,
+      "traitName": "Efficient Processors",
+      "traitImage": "trait_robot_efficient_processors.png",
+      "traitCost": 3,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 51,
+      "traitName": "Logic Engines",
+      "traitImage": "trait_robot_logic_engines.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 52,
+      "traitName": "Enhanced Memory",
+      "traitImage": "trait_robot_enhanced_memory.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": []
+    },
+    {
+      "traitId": 53,
+      "traitName": "Double-Jointed",
+      "traitImage": "trait_robot_double_jointed.png",
+      "traitCost": 1,
+      "type": "Machine",
+      "excludes": [54]
+    },
+    {
+      "traitId": 54,
+      "traitName": "Bulky",
+      "traitImage": "trait_robot_bulky.png",
+      "traitCost": -1,
+      "type": "Machine",
+      "excludes": [53]
+    },
+    {
+      "traitId": 55,
+      "traitName": "Emotion Emulators",
+      "traitImage": "trait_robot_emotion_emulators.png",
+      "traitCost": 1,
+      "type": "Machine",
+      "excludes": [56]
+    },
+    {
+      "traitId": 56,
+      "traitName": "Uncanny",
+      "traitImage": "trait_robot_uncanny.png",
+      "traitCost": -1,
+      "type": "Machine",
+      "excludes": [55]
+    },
+    {
+      "traitId": 57,
+      "traitName": "Durable",
+      "traitImage": "trait_robot_durable.png",
+      "traitCost": 1,
+      "type": "Machine",
+      "excludes": [58]
+    },
+    {
+      "traitId": 58,
+      "traitName": "High Maintenance",
+      "traitImage": "trait_robot_high_maintenance.png",
+      "traitCost": -1,
+      "type": "Machine",
+      "excludes": [57]
+    },
+    {
+      "traitId": 59,
+      "traitName": "Learning Algorithms",
+      "traitImage": "trait_robot_learning_algorithms.png",
+      "traitCost": 1,
+      "type": "Machine",
+      "excludes": [60]
+    },
+    {
+      "traitId": 60,
+      "traitName": "Repurposed Hardware",
+      "traitImage": "trait_robot_repurposed_hardware.png",
+      "traitCost": -1,
+      "type": "Machine",
+      "excludes": [59]
+    },
+    {
+      "traitId": 61,
+      "traitName": "Mass-Produced",
+      "traitImage": "trait_robot_mass_produced.png",
+      "traitCost": 1,
+      "type": "Machine",
+      "excludes": [62]
+    },
+    {
+      "traitId": 62,
+      "traitName": "Custom-Made",
+      "traitImage": "trait_robot_custom_made.png",
+      "traitCost": -1,
+      "type": "Machine",
+      "excludes": [61]
+    },
+    {
+      "traitId": 63,
+      "traitName": "Recycled",
+      "traitImage": "trait_robot_recycled.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": [64]
+    },
+    {
+      "traitId": 64,
+      "traitName": "Luxurious",
+      "traitImage": "trait_robot_luxurious.png",
+      "traitCost": -2,
+      "type": "Machine",
+      "excludes": [63]
+    },
+    {
+      "traitId": 65,
+      "traitName": "Streamlined Protocols",
+      "traitImage": "trait_robot_streamlined_protocols.png",
+      "traitCost": 2,
+      "type": "Machine",
+      "excludes": [66]
+    },
+    {
+      "traitId": 66,
+      "traitName": "High Bandwith",
+      "traitImage": "trait_robot_high_bandwidth.png",
+      "traitCost": -2,
+      "type": "Machine",
+      "excludes": [65]
+    },
+    {
+      "traitId": 67,
+      "traitName": "Lithoid",
+      "traitImage": "trait_lithoid.png",
+      "traitCost": 0,
+      "type": "Lithoid",
+      "excludes": [13, 14]
+    },
+    {
+      "traitId": 68,
+      "traitName": "Scintillating Skin",
+      "traitImage": "trait_lithoid_scintillating.png",
+      "traitCost": 2,
+      "type": "Lithoid",
+      "excludes": [69, 70]
+    },
+    {
+      "traitId": 69,
+      "traitName": "Gaseous Byproducts",
+      "traitImage": "trait_lithoid_gaseous_byproducts.png",
+      "traitCost": 2,
+      "type": "Lithoid",
+      "excludes": [68, 70]
+    },
+    {
+      "traitId": 70,
+      "traitName": "Volatile Excretions",
+      "traitImage": "trait_lithoid_volatile_excretions.png",
+      "traitCost": 2,
+      "type": "Lithoid",
+      "excludes": [68, 69]
+    },
+    {
+      "traitId": 71,
+      "traitName": "Crystallization",
+      "traitImage": "trait_lithoid_budding.png",
+      "traitCost": 2,
+      "type": "Lithoid",
+      "excludes": [15, 16]
+    },
+    {
+      "traitId": 72,
+      "traitName": "Radiotrophic",
+      "traitImage": "trait_lithoid_radiotrophic.png",
+      "traitCost": 2,
+      "type": "Lithoid",
+      "excludes": []
+    },
+    {
+      "traitId": 73,
+      "traitName": "Spliced Adaptability",
+      "traitImage": "trait_spliced_adaptability.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 74,
+      "traitName": "Juiced Power",
+      "traitImage": "trait_juiced_power.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 75,
+      "traitName": "Farm Appendages",
+      "traitImage": "trait_farm_hands.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 76,
+      "traitName": "Dedicated Miner",
+      "traitImage": "trait_crack_miner.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 77,
+      "traitName": "Technical Talent",
+      "traitImage": "trait_technical_skill.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 78,
+      "traitName": "Crafted Smiles",
+      "traitImage": "trait_cra.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 79,
+      "traitName": "Low Maintenance",
+      "traitImage": "trait_low_maintenance.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 80,
+      "traitName": "Augmented Intelligence",
+      "traitImage": "trait_augmented_intelligence.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 81,
+      "traitName": "Gene Mentorship",
+      "traitImage": "trait_gene_mentorship.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 82,
+      "traitName": "Expressed Tradition",
+      "traitImage": "trait_expresed_tradition.png",
+      "traitCost": 1,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 83,
+      "traitName": "Elevated Synapses",
+      "traitImage": "trait_elevated_synapses.png",
+      "traitCost": 2,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 84,
+      "traitName": "Pre-Planned Growth",
+      "traitImage": "trait_preplanned_growth.png",
+      "traitCost": 2,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 85,
+      "traitName": "Excessive Endurance",
+      "traitImage": "trait_excessive_endurance.png",
+      "traitCost": 3,
+      "type": "Overtuned",
+      "excludes": []
+    },
+    {
+      "traitId": 86,
+      "traitName": "Phototrophic",
+      "traitImage": "trait_plantoid_phototrophic.png",
+      "traitCost": 1,
+      "type": "Botanical",
+      "excludes": [87]
+    },
+    {
+      "traitId": 87,
+      "traitName": "Radiotrophic",
+      "traitImage": "trait_plantoid_radiotrophic.png",
+      "traitCost": 2,
+      "type": "Botanical",
+      "excludes": [86]
+    },
+    {
+      "traitId": 88,
+      "traitName": "Budding",
+      "traitImage": "trait_plantoid_budding.png",
+      "traitCost": 2,
+      "type": "Botanical",
+      "excludes": [13, 14, 15, 16]
+    },
+    {
+      "traitId": 89,
+      "traitName": "Invasive Species",
+      "traitImage": "trait_plantoid_invasive_species.png",
+      "traitCost": 2,
+      "type": "Botanical",
+      "excludes": [
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 18, 
+        20, 22, 24, 26, 27, 29, 31, 33, 35, 37, 38, 41, 
+        42, 44, 45
       ]
     }
   ]

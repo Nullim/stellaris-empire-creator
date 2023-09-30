@@ -6,6 +6,7 @@ export default function SpeciesName() {
   const [adjective, setAdjective] = useState("");
   const [namePlural, setNamePlural] = useState("");
   const [gender, setGender] = useState("default")
+  const [biographyLength, setBiographyLength] = useState(0);
 
   useEffect(() => {
     const getParamsFromURL = () => {
@@ -25,7 +26,7 @@ export default function SpeciesName() {
     const newName = e.target.value;
     setName(newName);
     const params = new URLSearchParams(window.location.search);
-    
+
     if (newName === "") {
       params.delete('uN');
       window.history.replaceState({}, '', `?${params.toString()}`);
@@ -61,6 +62,11 @@ export default function SpeciesName() {
     }
     params.set('uA', newAdjective);
     window.history.replaceState({}, '', `?${params.toString()}`);
+  }
+
+  const changeBiography = (e) => {
+    const newBiographyLength = e.target.value.length;
+    setBiographyLength(newBiographyLength)
   }
 
   const changeGender = (selectedGender) => {
@@ -99,8 +105,11 @@ export default function SpeciesName() {
         </div>
       </div>
       <div className="block">
-        <div className="flex flex-col pt-10">
-          <label className="pb-1">Biography (optional)</label>
+        <div className="relative flex flex-col pt-10">
+          <div className="pb-1 flex justify-between items-center">
+            <label>Biography (optional)</label>
+            <p className="text-right">{biographyLength}/500</p>
+          </div>
           <textarea
             className="bg-black/30 backdrop-blur-md font-normal pl-1 resize-none"
             rows={5}
@@ -108,6 +117,7 @@ export default function SpeciesName() {
             placeholder="A long time ago in a galaxy far, far away..."
             maxLength={500}
             spellCheck={false}
+            onChange={changeBiography}
           />
         </div>
       </div>

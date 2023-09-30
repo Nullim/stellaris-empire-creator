@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import traitColorSelector from '../utils/traitColorSelector';
 
-export default function Trait({ baseURL, traitName, traitImage, traitCost, traitType }) {
+export default function SelectedTrait({ id, baseURL, traitName, traitImage, traitCost, traitType, handleTraitClick }) {
   const [selectedURL, setSelectedURL] = useState('')
   
   useEffect(() => {
@@ -17,8 +17,15 @@ export default function Trait({ baseURL, traitName, traitImage, traitCost, trait
     setSelectedURL(url);
   }, [baseURL, traitType]);
 
+  const handleClick = () => {
+    handleTraitClick(id, traitCost);
+  };
+
   return (
-    <div className="border-2 bg-blue-900/70 border-blue-700 p-1 mb-2 last-of-type:mb-0 flex items-center justify-between">
+    <div 
+    className="border-2 bg-blue-900/70 border-blue-700 p-1 mb-2 last-of-type:mb-0 flex items-center justify-between"
+    onClick={handleClick}
+    >
       <div className='flex items-center'>
         <img src={selectedURL + traitImage} />
         <p className='pl-2 select-none'>{traitName}</p>
@@ -28,10 +35,12 @@ export default function Trait({ baseURL, traitName, traitImage, traitCost, trait
   )
 }
 
-Trait.propTypes = {
+SelectedTrait.propTypes = {
+  id: PropTypes.number.isRequired,
   baseURL: PropTypes.string.isRequired,
   traitName: PropTypes.string.isRequired,
   traitImage: PropTypes.string.isRequired,
   traitCost: PropTypes.number.isRequired,
-  traitType: PropTypes.string.isRequired
+  traitType: PropTypes.string.isRequired,
+  handleTraitClick: PropTypes.func.isRequired
 }
