@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 
 const BASE_URL = '../../images/genders'
 
@@ -27,7 +26,7 @@ const genderData = [
   },
 ]
 
-const GenderSelection = ({ handleGenderClick }) => {
+const GenderSelection = () => {
   const [selectedGender, setSelectedGender] = useState('default');
   const [hoveredGender, setHoveredGender] = useState(null);
   const [isMachine, setIsMachine] = useState(false);
@@ -85,7 +84,6 @@ const GenderSelection = ({ handleGenderClick }) => {
       window.history.replaceState({}, '', `?${params.toString()}`);
       return newGender;
     });
-    handleGenderClick(gender);
   };
 
   return (
@@ -118,10 +116,6 @@ const GenderSelection = ({ handleGenderClick }) => {
       </p>
     </div>
   );
-};
-
-GenderSelection.propTypes = {
-  handleGenderClick: PropTypes.func.isRequired
 };
 
 export default GenderSelection

@@ -5,7 +5,6 @@ export default function SpeciesName() {
   const [name, setName] = useState("");
   const [adjective, setAdjective] = useState("");
   const [namePlural, setNamePlural] = useState("");
-  const [gender, setGender] = useState("default")
   const [biographyLength, setBiographyLength] = useState(0);
 
   useEffect(() => {
@@ -68,11 +67,6 @@ export default function SpeciesName() {
     const newBiographyLength = e.target.value.length;
     setBiographyLength(newBiographyLength)
   }
-
-  const changeGender = (selectedGender) => {
-    setGender(selectedGender);
-  }
-
   return (
     <div className="flex justify-evenly font-bold">
       <div className="block lg:px-4">
@@ -124,7 +118,7 @@ export default function SpeciesName() {
       <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
           <label className="pb-1">Gender (optional)</label>
-          <GenderSelection handleGenderClick={changeGender} />
+          <GenderSelection />
         </div>
       </div>
     </div>
