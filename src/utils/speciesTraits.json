@@ -399,7 +399,7 @@
       "traitImage": "trait_fleeting.png",
       "traitCost": -1,
       "traitDescription": "Time is fleeting for this species. What they lack in longevity, they have to make up in other ways.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&"],
+      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "If $Y$Lithoid&Y&: $R$-25 Years&R&"],
       "type": "Organic",
       "excludes": [37, 38]
     },

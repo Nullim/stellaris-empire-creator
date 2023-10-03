@@ -218,10 +218,13 @@ export default function SpeciesTraits() {
             <div className="flex flex-col">
               <p className="py-1">Hover over a trait to see its description!</p>
               <p className="py-1">
-                Be aware that some traits are only available if you&apos;re a specific type of species (Plantoid, Machine, etc...).
+                Be aware that some traits are <span className="text-orange-500">only</span> available if you&apos;re a specific type of species (Plantoid, Machine, etc...).
               </p>
               <p className="py-1">
                 So if you can&apos;t find a specific trait you want, make sure you have the right species type!
+              </p>
+              <p className="py-1">
+                (<span className="text-yellow-400">Note</span>: switching species types <span className="text-red-500">will remove your selected traits</span> if any.)
               </p>
             </div>
           )}
