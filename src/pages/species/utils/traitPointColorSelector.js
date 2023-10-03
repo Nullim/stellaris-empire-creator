@@ -1,4 +1,4 @@
-export default function traitColorSelector(traitCost) {
+export default function traitPointColorSelector(traitCost) {
   if (traitCost > 0) {
     return "text-green-400"
   } else if (traitCost < 0) {
