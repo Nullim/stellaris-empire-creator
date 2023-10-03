@@ -28,10 +28,22 @@ export default function SpeciesPortraits() {
     getParamsFromURL();
   }, []);
 
+  function updateTraitParams (speciesData) {
+    const params = new URLSearchParams(window.location.search);
+    const traitParams = params.get('sT');
+    const speciesParam = params.get('sN');
+
+    if(traitParams && speciesParam !== speciesData.name) {
+      params.delete('sT');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+    }
+  }
+
   const handleSpeciesClick = (species) => {
     if (species === selectedSpeciesData) return;
     setIsLoading(true)
-    setSelectedSpeciesData(() => species)
+    updateTraitParams(species)
+    setSelectedSpeciesData(species)
   }
 
   const handlePortraitClick = (portrait) => {
@@ -62,16 +74,15 @@ export default function SpeciesPortraits() {
   }, [selectedSpeciesData]);
 
   return (
-    <div className="flex h-full w-full">
-      
+    <div className="flex h-full w-full font-semibold">
       {/* Render species namelist */}
-      <div className="w-1/6 p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-green-800 scrollbar-track-slate-500">
-        <ul>
+      <div className="w-52 p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-800 scrollbar-track-slate-500/10">
+        <ul className="border-2 border-slate-600 bg-black/40 p-2">
           {speciesData.map((namelist, index) => (
             <li
               key={index}
-              className={`py-1 px-2 cursor-pointer border font-bold 
-                ${namelist === selectedSpeciesData ? "border-cyan-300" : "border-transparent"}
+              className={`py-1 pl-2 cursor-pointer border font-bold 
+                ${namelist === selectedSpeciesData ? "border-blue-500 bg-blue-700/10" : "border-transparent"}
               `}
               onClick={() => handleSpeciesClick(namelist)}>
               {namelist.name}
@@ -81,19 +92,19 @@ export default function SpeciesPortraits() {
       </div>
 
       {/* Render species images */}
-      <div className="w-full p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-green-800 scrollbar-track-slate-500">
-        <div className="flex flex-wrap">
+      <div className="w-full p-2 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
+        <div className="flex flex-wrap border-2 border-gray-500 bg-black/40 p-1">
           {isLoading ? (
             <p className="cursor-progress">Loading...</p>
           ) : (
             selectedSpeciesData.images.map((image, index) => (
               <div
                 key={index}
-                className={`border 
-                  ${image === selectedPortrait ? "border-cyan-500 border-2 transition-all" : "border-transparent border-2"}
+                className={`border-2 m-1
+                  ${image === selectedPortrait ? "border-blue-500 bg-gray-900/70" : "border border-gray-700"}
                 `}>
                 <img
-                  className="cursor-pointer object-contain object-bottom mb-1 w-36 h-36"
+                  className="cursor-pointer object-contain object-bottom w-36 h-36"
                   src={`${selectedSpeciesData.url}/${image}`}
                   alt={image}
                   onClick={() => handlePortraitClick(image)}
@@ -103,7 +114,6 @@ export default function SpeciesPortraits() {
           )}
         </div>
       </div>
-      
     </div>
   )
 }

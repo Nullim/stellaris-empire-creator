@@ -68,12 +68,12 @@ export default function SpeciesName() {
     setBiographyLength(newBiographyLength)
   }
   return (
-    <div className="flex justify-evenly font-bold">
+    <div className="flex justify-evenly font-semibold">
       <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
           <label className="pb-1">Name</label>
           <input
-            className="bg-black/30 backdrop-blur-md font-normal pl-1"
+            className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={name}
             maxLength={15}
             onChange={changeName}
@@ -82,7 +82,7 @@ export default function SpeciesName() {
         <div className="flex flex-col pt-2">
           <label className="pb-1">Plural</label>
           <input
-            className="bg-black/30 backdrop-blur-md font-normal pl-1"
+            className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={namePlural}
             maxLength={20}
             onChange={changeNamePlural}
@@ -91,7 +91,7 @@ export default function SpeciesName() {
         <div className="flex flex-col pt-2">
           <label className="pb-1">Adjective</label>
           <input
-            className="bg-black/30 backdrop-blur-md font-normal pl-1"
+            className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={adjective}
             maxLength={20}
             onChange={changeAdjective}
@@ -105,7 +105,7 @@ export default function SpeciesName() {
             <p className="text-right">{biographyLength}/500</p>
           </div>
           <textarea
-            className="bg-black/30 backdrop-blur-md font-normal pl-1 resize-none"
+            className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 resize-none outline-none focus:border-blue-500"
             rows={5}
             cols={50}
             placeholder="A long time ago in a galaxy far, far away..."

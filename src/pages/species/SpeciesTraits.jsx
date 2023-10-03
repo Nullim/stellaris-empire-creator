@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import speciesTraits from "../../utils/speciesTraits.json";
-import SelectedTrait from "./layout/SelectedTrait";
 import traitPointColorSelector from "./utils/traitPointColorSelector";
+
+import SelectedTrait from "./layout/SelectedTrait";
 import AvailableTrait from "./layout/AvailableTrait";
+import TraitDescription from "./layout/TraitDescription";
 
 export default function SpeciesTraits() {
   const [availableTraits, setAvailableTraits] = useState([]);
   const [selectedTraits, setSelectedTraits] = useState([]);
+  const [requiredTrait, setRequiredTrait] = useState(null);
   const [imageURL, setImageURL] = useState([]);
-  const [traitPicks, setTraitPicks] = useState(5);
-  const [traitPoints, setTraitPoints] = useState(2);
+  const [traitPicks, setTraitPicks] = useState();
+  const [traitPoints, setTraitPoints] = useState();
   const [traitVisible, setTraitVisible] = useState({});
-  const [traitDescription, setTraitDescription] = useState('');
+  const [hoveredTrait, setHoveredTrait] = useState();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -22,16 +25,21 @@ export default function SpeciesTraits() {
 
     let traitsToSet;
     let ImageURLToSet;
+    let compulsoryTraitToSet;
+    let traitPointsToSet = 2;
+    let traitPicksToSet = 5;
 
     if (isMachine) {
       traitsToSet = speciesTraits.traits.filter(trait => trait.type === 'Machine');
       ImageURLToSet = [speciesTraits.machineUrl];
+      compulsoryTraitToSet = 46; // "Machine" trait ID.
     } else if (isBotanical) {
       traitsToSet = speciesTraits.traits.filter(trait => trait.type === 'Organic' || trait.type === 'Botanical');
       ImageURLToSet = [speciesTraits.organicUrl, speciesTraits.botanicalUrl];
     } else if (isLithoid) {
       traitsToSet = speciesTraits.traits.filter(trait => trait.type === 'Organic' || trait.type === 'Lithoid');
       ImageURLToSet = [speciesTraits.organicUrl, speciesTraits.lithoidUrl];
+      compulsoryTraitToSet = 67; // "Lithoid" trait ID.
     } else {
       traitsToSet = speciesTraits.traits.filter(trait => trait.type === 'Organic');
       ImageURLToSet = [speciesTraits.organicUrl];
@@ -39,8 +47,27 @@ export default function SpeciesTraits() {
 
     const visibleTraits = {};
     traitsToSet.forEach(trait => {
-      visibleTraits[trait.traitId] = true;
+      trait.traitId === compulsoryTraitToSet
+        ? visibleTraits[trait.traitId] = false
+        : visibleTraits[trait.traitId] = true
     });
+
+    if (compulsoryTraitToSet) {
+      const requiredTraitToSet = traitsToSet.find(trait => {
+        return trait.traitId === compulsoryTraitToSet;
+      })
+      if (requiredTraitToSet.traitId === 46) traitPointsToSet = 1;
+      setRequiredTrait(requiredTraitToSet);
+      setSelectedTraits(prevSelectedTraits => {
+        const traitPresent = prevSelectedTraits.some(trait => trait === requiredTraitToSet)
+        if (!traitPresent) {
+          return [...prevSelectedTraits, requiredTraitToSet]
+        }
+        return prevSelectedTraits;
+      })
+    } else {
+      setRequiredTrait(null);
+    }
 
     if (urlTraitParams) {
       const urlTraitIds = urlParams.getAll('sT');
@@ -48,18 +75,19 @@ export default function SpeciesTraits() {
       traitsToLoad.forEach((traitId) => {
         const compatibleTraitId = parseInt(traitId);
         const availableTrait = traitsToSet.find(trait => {
-          return trait.traitId === compatibleTraitId;
+          return trait.traitId === compatibleTraitId && trait.traitId !== compulsoryTraitToSet;
         });
 
         if (availableTrait) {
+          traitPointsToSet -= availableTrait.traitCost;
+          traitPicksToSet -= 1;
           setSelectedTraits(prevSelectedTraits => {
-            const traitPresent = prevSelectedTraits.some(trait => trait === availableTrait)
+            const traitPresent = prevSelectedTraits.some(trait => trait.traitId === availableTrait.traitId);
             if (!traitPresent) {
-              setTraitPicks(prevTraitPicks => prevTraitPicks - 1);
-              setTraitPoints(prevTraitPoints => prevTraitPoints - availableTrait.traitCost);
               return [...prevSelectedTraits, availableTrait];
+            } else {
+              return prevSelectedTraits;
             }
-            return prevSelectedTraits;
           });
 
           visibleTraits[compatibleTraitId] = false;
@@ -72,6 +100,9 @@ export default function SpeciesTraits() {
         }
       });
     }
+
+    setTraitPoints(traitPointsToSet);
+    setTraitPicks(traitPicksToSet);
     setTraitVisible(visibleTraits);
     setAvailableTraits(traitsToSet);
     setImageURL(ImageURLToSet);
@@ -132,35 +163,67 @@ export default function SpeciesTraits() {
     }
   }
 
+
   const handleTraitClick = (id) => {
-    const selectedTrait = selectedTraits.find(trait => trait.traitId === id);
-    const availableTrait = availableTraits.find(trait => trait.traitId === id);
+    const selectedTrait = selectedTraits.find(trait => {
+      if (requiredTrait) {
+        return trait.traitId === id && requiredTrait.traitId !== id;
+      } else {
+        return trait.traitId === id;
+      }
+    });
+
+    const availableTrait = availableTraits.find(trait => {
+      if (requiredTrait) {
+        return trait.traitId === id && requiredTrait.traitId !== id;
+      } else {
+        return trait.traitId === id;
+      }
+    });
 
     if (selectedTrait) {
       deselectTraitLogic(selectedTrait)
-    } else if (traitPicks !== 0) {
+    } else if (availableTrait && traitPicks !== 0) {
       selectTraitLogic(availableTrait)
     }
   }
 
   const handleHoverStatus = (trait, isHovered) => {
-    isHovered
-    ? setTraitDescription('I am being hovered!')
-    : setTraitDescription('Hover over a trait to see its description!')
+    if (isHovered) setHoveredTrait(trait);
   }
 
   return (
-    <div className="flex font-bold py-4 px-5 gap-5 h-full">
+    <div className="flex font-semibold py-4 px-5 gap-5 h-full">
       <div className="flex flex-col w-1/3">
         <div className="flex flex-col w-full text-right">
           <p>Trait points left: <span className={traitPointColorSelector(traitPoints)}>{traitPoints}</span></p>
           <p>Trait picks left: <span className={traitPointColorSelector(traitPicks)}>{traitPicks}</span></p>
         </div>
-        <div className="bg-black/40 flex-grow border-2 border-gray-500 p-2 font-normal">
-          {traitDescription !== '' ? (
-            traitDescription
+        <div className="
+          flex-grow 
+          border-2 
+         border-gray-500 
+         bg-black/40 
+          p-2 
+          overflow-y-auto 
+          scrollbar 
+          scrollbar-thumb-blue-800 
+          scrollbar-track-transparent
+          font-normal
+          "
+        >
+          {hoveredTrait ? (
+            <TraitDescription trait={hoveredTrait} />
           ) : (
-            'Hover over a trait to see its description!'
+            <div className="flex flex-col">
+              <p className="py-1">Hover over a trait to see its description!</p>
+              <p className="py-1">
+                Be aware that some traits are only available if you&apos;re a specific type of species (Plantoid, Machine, etc...).
+              </p>
+              <p className="py-1">
+                So if you can&apos;t find a specific trait you want, make sure you have the right species type!
+              </p>
+            </div>
           )}
         </div>
       </div>
@@ -176,7 +239,7 @@ export default function SpeciesTraits() {
           p-2 
           overflow-y-auto 
           scrollbar 
-          scrollbar-thumb-green-800 
+          scrollbar-thumb-blue-800 
           scrollbar-track-transparent
           font-normal
           "
@@ -206,7 +269,7 @@ export default function SpeciesTraits() {
           p-2 
           overflow-y-auto 
           scrollbar 
-          scrollbar-thumb-green-800 
+          scrollbar-thumb-blue-800 
           scrollbar-track-transparent
           font-normal
           "

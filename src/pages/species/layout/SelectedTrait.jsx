@@ -24,7 +24,6 @@ export default function SelectedTrait({ trait, traitType, baseURL, handleTraitCl
   return (
     <div
       onMouseEnter={() => handleHoverStatus(trait, true)}
-      onMouseLeave={() => handleHoverStatus(trait, false)}
       className="border-2 bg-gray-900/70 border-gray-700 p-1 mb-2 last-of-type:mb-0 flex items-center justify-between"
       onClick={handleClick}
     >
@@ -32,7 +31,7 @@ export default function SelectedTrait({ trait, traitType, baseURL, handleTraitCl
         <img src={selectedURL + trait.traitImage} />
         <p className='pl-2 select-none'>{trait.traitName}</p>
       </div>
-      <p className={traitCostColorSelector(trait.traitCost)}>{trait.traitCost}</p>
+      <p className={`pr-2 ${traitCostColorSelector(trait.traitCost)}`}>{trait.traitCost}</p>
     </div>
   )
 }

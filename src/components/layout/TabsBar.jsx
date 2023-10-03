@@ -28,18 +28,18 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
         >
           <button
             className={`cursor-pointer px-4 py-2 font-bold ${
-              activeTab === index ? "bg-green-800 text-white" : "bg-green-900 text-white"
+              activeTab === index ? "bg-blue-800 text-white" : "bg-blue-900 text-white"
             }`}
           >
             {tab.label}
           </button>
   
           {isOpen && activeTab === index && (
-            <div className="absolute w-32 bg-green-800">
+            <div className="absolute w-32 bg-blue-800">
               {tab.menuItem.map((item, itemIndex) => (
                 <button
                   key={itemIndex}
-                  className="block px-3 py-1 text-white hover:bg-green-700 w-full text-left"
+                  className="block px-3 py-1 text-white hover:bg-blue-700 w-full text-left"
                   onClick={() => handleMenuItemSelect(item, tab.label)}
                 >
                   {item.menuLabel}
