@@ -95,7 +95,7 @@ export default function SpeciesPortraits() {
       <div className="w-full p-2 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
         <div className="flex flex-wrap border-2 border-gray-500 bg-black/40 p-1">
           {isLoading ? (
-            <p className="cursor-progress">Loading...</p>
+            <p className="w-full h-full flex items-center justify-center cursor-progress">Loading...</p>
           ) : (
             selectedSpeciesData.images.map((image, index) => (
               <div

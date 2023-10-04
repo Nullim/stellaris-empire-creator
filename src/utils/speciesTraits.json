@@ -12,13 +12,13 @@
       "traitCost": 2,
       "traitDescription": "This species is perfectly adapted to living in the depths of the ocean. However, on dry land, it is like a fish out of water.",
       "traitEffects": [
-        "$R$Requires $Y$Ocean World&Y& Homeworld.&R&",
-        "Ocean habitability: $G$+20%&G&",
-        "Housing usage on $Y$Ocean&Y& worlds and $Y$Flooded Habitats&Y&: $G$-10%&G&",
-        "Food, Energy and Mineral output on $Y$Ocean&Y& worlds: $G$+10%&G&",
-        "Housing usage on non-$Y$Wet&Y& worlds: $R$+30%&R&",
-        "Habitability on non-$Y$Wet&Y& worlds: $R$+30%&R&",
-        "The $O$Hydrocentric&O& Ascension Perk amplifies this trait's effects."
+        "$R$Requires $Y$Ocean World&SP& Homeworld.&SP&",
+        "Ocean habitability: $G$+20%&SP&",
+        "Housing usage on $Y$Ocean&SP& worlds and $Y$Flooded Habitats&SP&: $G$-10%&SP&",
+        "Food, Energy and Mineral output on $Y$Ocean&SP& worlds: $G$+10%&SP&",
+        "Housing usage on non-$Y$Wet&SP& worlds: $R$+30%&SP&",
+        "Habitability on non-$Y$Wet&SP& worlds: $R$+30%&SP&",
+        "The $O$Hydrocentric&SP& Ascension Perk amplifies this trait's effects."
       ],
       "type": "Organic",
       "excludes": []
@@ -29,9 +29,13 @@
       "traitImage": "trait_agrarian.png",
       "traitCost": 2,
       "traitDescription": "This species has a deep connection to the land, and make expert farmers and gardeners.",
-      "traitEffects": ["Food from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$F$Food from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 3,
@@ -39,9 +43,13 @@
       "traitImage": "trait_ingenious.png",
       "traitCost": 2,
       "traitDescription": "Members of this species are good at 'thinking outside the box' and know how to maximize the efficiency of their infrastructure and power grids.",
-      "traitEffects": ["Energy from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$E$Energy from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 4,
@@ -49,29 +57,41 @@
       "traitImage": "trait_industrious.png",
       "traitCost": 2,
       "traitDescription": "Members of this species are known for their diligent and hard-working nature, always going above and beyond.",
-      "traitEffects": ["Minerals from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$M$Minerals from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 5,
-      "traitName": "Intelligent",
-      "traitImage": "trait_intelligent.png",
-      "traitCost": 2,
-      "traitDescription": "This species is highly intelligent, and enjoys faster technological progress.",
-      "traitEffects": ["Research from Jobs: $G$+10%&G&"],
-      "type": "Organic",
-      "excludes": [89]
-    },
-    {
-      "traitId": 6,
       "traitName": "Thrifty",
       "traitImage": "trait_thrifty.png",
       "traitCost": 2,
       "traitDescription": "Members of this species are instinctively economical and are always looking to make a good profit, whatever corners need cutting.",
-      "traitEffects": ["Trade Value from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$DOSH$Trade Value from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
+    },
+    {
+      "traitId": 6,
+      "traitName": "Intelligent",
+      "traitImage": "trait_intelligent.png",
+      "traitCost": 2,
+      "traitDescription": "This species is highly intelligent, and enjoys faster technological progress.",
+      "traitEffects": [
+        "$TECH$Research from Jobs: $G$+10%&SP&"
+      ],
+      "type": "Organic",
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 7,
@@ -79,9 +99,15 @@
       "traitImage": "trait_natural_engineers.png",
       "traitCost": 1,
       "traitDescription": "Members of this species have a natural inclination towards engineering and material sciences.",
-      "traitEffects": ["Engineering Research from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$ENG$Engineering Research from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [8, 9, 89]
+      "excludes": [
+        8,
+        9,
+        89
+      ]
     },
     {
       "traitId": 8,
@@ -89,9 +115,15 @@
       "traitImage": "trait_natural_physicists.png",
       "traitCost": 1,
       "traitDescription": "Members of this species have a natural inclination towards theoretical physics and astral phenomena.",
-      "traitEffects": ["Physics Research from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$PHYS$Physics Research from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [7, 9, 89]
+      "excludes": [
+        7,
+        9,
+        89
+      ]
     },
     {
       "traitId": 9,
@@ -99,9 +131,15 @@
       "traitImage": "trait_natural_sociologists.png",
       "traitCost": 1,
       "traitDescription": "Members of this species have a natural inclination towards sociology and biological studies.",
-      "traitEffects": ["Society Research from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$SOC$Society Research from Jobs: $G$+15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [7, 8, 89]
+      "excludes": [
+        7,
+        8,
+        89
+      ]
     },
     {
       "traitId": 10,
@@ -109,9 +147,15 @@
       "traitImage": "trait_extremely_adaptive.png",
       "traitCost": 4,
       "traitDescription": "This species is remarkably adept at adapting to any foreign environments.",
-      "traitEffects": ["Habitability: $G$+20%&G&"],
+      "traitEffects": [
+        "Habitability: $G$+20%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [11, 12, 89]
+      "excludes": [
+        11,
+        12,
+        89
+      ]
     },
     {
       "traitId": 11,
@@ -119,9 +163,15 @@
       "traitImage": "trait_adaptive.png",
       "traitCost": 2,
       "traitDescription": "This species is highly adaptive when it comes to foreign environments.",
-      "traitEffects": ["Habitability: $G$+10%&G&"],
+      "traitEffects": [
+        "Habitability: $G$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [10, 12, 89]
+      "excludes": [
+        10,
+        12,
+        89
+      ]
     },
     {
       "traitId": 12,
@@ -129,9 +179,14 @@
       "traitImage": "trait_nonadaptive.png",
       "traitCost": -2,
       "traitDescription": "This species does not adapt well to foreign environments.",
-      "traitEffects": ["Habitability: $R$-10%&R&"],
+      "traitEffects": [
+        "Habitability: $R$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [11, 12]
+      "excludes": [
+        11,
+        12
+      ]
     },
     {
       "traitId": 13,
@@ -139,9 +194,18 @@
       "traitImage": "trait_rapid_breeders.png",
       "traitCost": 2,
       "traitDescription": "This species reproduces at a very rapid rate, increasing population growth.",
-      "traitEffects": ["Pop Growth Speed: $G$+10%&G&"],
+      "traitEffects": [
+        "$POP$Pop Growth Speed: $G$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [14, 15, 16, 67, 88, 89]
+      "excludes": [
+        14,
+        15,
+        16,
+        67,
+        88,
+        89
+      ]
     },
     {
       "traitId": 14,
@@ -149,9 +213,18 @@
       "traitImage": "trait_slow_breeders.png",
       "traitCost": -2,
       "traitDescription": "This species reproduces at a slow rate, lowering population growth.",
-      "traitEffects": ["Pop Growth Speed: $R$-10%&R&"],
+      "traitEffects": [
+        "$POP$Pop Growth Speed: $R$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [13, 15, 16, 17, 67, 88]
+      "excludes": [
+        13,
+        15,
+        16,
+        17,
+        67,
+        88
+      ]
     },
     {
       "traitId": 15,
@@ -159,9 +232,18 @@
       "traitImage": "trait_incubator.png",
       "traitCost": 2,
       "traitDescription": "When isolated or few in numbers, a species with this trait naturally adapts and is able to focus on procreation with an intentness others would consider extreme. However, when in large numbers, this effect is reversed, and they find reproduction more difficult.",
-      "traitEffects": ["Grants between $G$+30%&G& and $R$-10%&R& Pop Growth Speed, inversely proportional to the number of pops on the planet."],
+      "traitEffects": [
+        "Grants between $G$+30%&SP& and $R$-10%&SP& $POP$Pop Growth Speed, inversely proportional to the number of Pops on the planet."
+      ],
       "type": "Organic",
-      "excludes": [13, 14, 16, 71, 88, 89]
+      "excludes": [
+        13,
+        14,
+        16,
+        71,
+        88,
+        89
+      ]
     },
     {
       "traitId": 16,
@@ -169,9 +251,19 @@
       "traitImage": "trait_existential_iteroparity.png",
       "traitCost": 2,
       "traitDescription": "This species grew up in hostile conditions where outbreeding your rivals was the key to survival.",
-      "traitEffects": ["Pop Growth during $Y$War&Y& and $Y$Crisis&Y&: $G$+30%&G&"],
+      "traitEffects": [
+        "$POP$Pop Growth during $Y$War&SP& and $Y$Crisis&SP&: $G$+30%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [13, 14, 15, 17, 71, 88, 89]
+      "excludes": [
+        13,
+        14,
+        15,
+        17,
+        71,
+        88,
+        89
+      ]
     },
     {
       "traitId": 17,
@@ -179,9 +271,14 @@
       "traitImage": "trait_psychological_infertility.png",
       "traitCost": -2,
       "traitDescription": "Members of this species are extremely sensitive to the rigors of conflict with the resulting stress taking over the more primal urges.",
-      "traitEffects": ["Pop Growth during $Y$War&Y& and $Y$Crisis&Y&: $R$-30%&R&"],
+      "traitEffects": [
+        "$POP$Pop Growth during $Y$War&SP& and $Y$Crisis&SP&: $R$-30%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [14, 16]
+      "excludes": [
+        14,
+        16
+      ]
     },
     {
       "traitId": 18,
@@ -189,9 +286,15 @@
       "traitImage": "trait_talented.png",
       "traitCost": 1,
       "traitDescription": "Member of this species are born with a natural aptitude.",
-      "traitEffects": ["Leader Upkeep: $G$-10%&G&", "Leader Maximum Negative Traits: $G$-1&G&"],
+      "traitEffects": [
+        "Leader Upkeep: $G$-10%&SP&",
+        "Leader Maximum Negative Traits: $G$-1&SP&"
+      ],
       "type": "Organic",
-      "excludes": [19, 89]
+      "excludes": [
+        19,
+        89
+      ]
     },
     {
       "traitId": 19,
@@ -199,9 +302,13 @@
       "traitImage": "trait_jinxed.png",
       "traitCost": -1,
       "traitDescription": "Leaders from this species seem clumsier and more prone to accidents or vices than average, as if cursed from birth.",
-      "traitEffects": ["Leader Maximum Negative Traits: $R$+1&R&"],
+      "traitEffects": [
+        "Leader Maximum Negative Traits: $R$+1&SP&"
+      ],
       "type": "Organic",
-      "excludes": [18]
+      "excludes": [
+        18
+      ]
     },
     {
       "traitId": 20,
@@ -209,9 +316,14 @@
       "traitImage": "trait_quick_learners.png",
       "traitCost": 1,
       "traitDescription": "Members of this species are quick to learn from their experiences.",
-      "traitEffects": ["Leader Experience Gain: $G$+10%&G&"],
+      "traitEffects": [
+        "Leader Experience Gain: $G$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [21, 89]
+      "excludes": [
+        21,
+        89
+      ]
     },
     {
       "traitId": 21,
@@ -219,9 +331,13 @@
       "traitImage": "trait_slow_learners.png",
       "traitCost": -1,
       "traitDescription": "Members of this species are slow to learn from their experiences.",
-      "traitEffects": ["Leader Experience Gain: $R$-10%&R&"],
+      "traitEffects": [
+        "Leader Experience Gain: $R$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [20]
+      "excludes": [
+        20
+      ]
     },
     {
       "traitId": 22,
@@ -229,9 +345,14 @@
       "traitImage": "trait_traditional.png",
       "traitCost": 1,
       "traitDescription": "Certain aspects of this species' cognition makes it predisposed to especially value historical precedence and group unity.",
-      "traitEffects": ["Unity from Jobs: $G$+10%&G&"],
+      "traitEffects": [
+        "$UNI$Unity from Jobs: $G$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [23, 89]
+      "excludes": [
+        23,
+        89
+      ]
     },
     {
       "traitId": 23,
@@ -239,9 +360,13 @@
       "traitImage": "trait_quarrelsome.png",
       "traitCost": -1,
       "traitDescription": "While not inherently distrustful, members of this species are often socially combative.",
-      "traitEffects": ["Unity from Jobs: $R$-10%&R&"],
+      "traitEffects": [
+        "$UNI$Unity from Jobs: $R$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [22]
+      "excludes": [
+        22
+      ]
     },
     {
       "traitId": 24,
@@ -249,9 +374,14 @@
       "traitImage": "trait_docile.png",
       "traitCost": 2,
       "traitDescription": "Members of this species are easy to manage and organize. They tend to be cooperative and amicable.",
-      "traitEffects": ["Empire Size from Pops: $G$-10%&G&"],
+      "traitEffects": [
+        "$EMP$Empire Size from Pops: $G$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [25, 89]
+      "excludes": [
+        25,
+        89
+      ]
     },
     {
       "traitId": 25,
@@ -259,9 +389,13 @@
       "traitImage": "trait_unruly.png",
       "traitCost": -2,
       "traitDescription": "Unruly species are difficult to manage and organize. They do not like being told what to do, and are often quarrelsome or questioning.",
-      "traitEffects": ["Empire Size from Pops: $R$+10%&R&"],
+      "traitEffects": [
+        "$EMP$Empire Size from Pops: $R$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [24]
+      "excludes": [
+        24
+      ]
     },
     {
       "traitId": 26,
@@ -269,9 +403,16 @@
       "traitImage": "trait_very_strong.png",
       "traitCost": 3,
       "traitDescription": "Members of this species possess a strength that almost defies the laws of physics.",
-      "traitEffects": ["Army Damage: $G$+40%&G&", "Worker Pop Resource Output: $G$+5%&G&"],
+      "traitEffects": [
+        "$ARMY$Army Damage: $G$+40%&SP&",
+        "Worker Pop Resource Output: $G$+5%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [27, 28, 89]
+      "excludes": [
+        27,
+        28,
+        89
+      ]
     },
     {
       "traitId": 27,
@@ -279,9 +420,16 @@
       "traitImage": "trait_strong.png",
       "traitCost": 1,
       "traitDescription": "Members of this species possess great physical strength, making them formidable fighters on the ground.",
-      "traitEffects": ["Army Damage: $G$+20%&G&", "Worker Pop Resource Output: $G$+2.50%&G&"],
+      "traitEffects": [
+        "$ARMY$Army Damage: $G$+20%&SP&",
+        "Worker Pop Resource Output: $G$+2.50%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [26, 28, 89]
+      "excludes": [
+        26,
+        28,
+        89
+      ]
     },
     {
       "traitId": 28,
@@ -289,9 +437,15 @@
       "traitImage": "trait_weak.png",
       "traitCost": -1,
       "traitDescription": "Members of this species are physically weaker than average, making them poor fighters on the ground.",
-      "traitEffects": ["Army Damage: $R$-20%&R&", "Worker Pop Resource Output: $R$-2.50%&R&"],
+      "traitEffects": [
+        "$ARMY$Army Damage: $R$-20%&SP&",
+        "Worker Pop Resource Output: $R$-2.50%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [26, 27]
+      "excludes": [
+        26,
+        27
+      ]
     },
     {
       "traitId": 29,
@@ -299,9 +453,15 @@
       "traitImage": "trait_nomadic.png",
       "traitCost": 1,
       "traitDescription": "This species has a nomadic past, and its members often think nothing of relocating to another world.",
-      "traitEffects": ["Pop Growth from Immigration: $G$+15%&G&", "Resettlement Cost: $G$-25%&G&"],
+      "traitEffects": [
+        "$POP$Pop Growth from Immigration: $G$+15%&SP&",
+        "Resettlement Cost: $G$-25%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [30, 89]
+      "excludes": [
+        30,
+        89
+      ]
     },
     {
       "traitId": 30,
@@ -309,9 +469,14 @@
       "traitImage": "trait_sedentary.png",
       "traitCost": -1,
       "traitDescription": "This species has a sedentary past, and its members are reluctant to migrate away from where they grew up.",
-      "traitEffects": ["Pop Growth from Immigration: $R$-15%&R&", "Resettlement Cost: $R$+25%&R&"],
+      "traitEffects": [
+        "$POP$Pop Growth from Immigration: $R$-15%&SP&",
+        "Resettlement Cost: $R$+25%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [29]
+      "excludes": [
+        29
+      ]
     },
     {
       "traitId": 31,
@@ -319,9 +484,14 @@
       "traitImage": "trait_communal.png",
       "traitCost": 1,
       "traitDescription": "Members of this species are highly communal, and quite used to living in close proximity to others.",
-      "traitEffects": ["Pop Housing Usage: $G$-10%&G&"],
+      "traitEffects": [
+        "$H$Pop Housing Usage: $G$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [32, 89]
+      "excludes": [
+        32,
+        89
+      ]
     },
     {
       "traitId": 32,
@@ -329,9 +499,13 @@
       "traitImage": "trait_solitary.png",
       "traitCost": -1,
       "traitDescription": "Members of this species tend to be solitary and territorial, often becoming agitated in crowded conditions.",
-      "traitEffects": ["Pop Housing Usage: $R$+10%&R&"],
+      "traitEffects": [
+        "$H$Pop Housing Usage: $R$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [31]
+      "excludes": [
+        31
+      ]
     },
     {
       "traitId": 33,
@@ -339,9 +513,14 @@
       "traitImage": "trait_charismatic.png",
       "traitCost": 2,
       "traitDescription": "Members of this species have a special charisma, and are generally considered pleasant to be around.",
-      "traitEffects": ["Amenities from Jobs: $G$+20%&G&"],
+      "traitEffects": [
+        "$AM$Amenities from Jobs: $G$+20%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [34, 89]
+      "excludes": [
+        34,
+        89
+      ]
     },
     {
       "traitId": 34,
@@ -349,9 +528,13 @@
       "traitImage": "trait_repugnant.png",
       "traitCost": -2,
       "traitDescription": "The physical appearance and customs of this species are considered offensive to most others, and few appreciate them as neighbors.",
-      "traitEffects": ["Amenities from Jobs: $R$-20%&R&"],
+      "traitEffects": [
+        "$AM$Amenities from Jobs: $R$-20%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [33]
+      "excludes": [
+        33
+      ]
     },
     {
       "traitId": 35,
@@ -359,9 +542,14 @@
       "traitImage": "trait_conformists.png",
       "traitCost": 1,
       "traitDescription": "These people always seek consensus and are more likely to conform to the governing ethics.",
-      "traitEffects": ["Governing Ethics Attraction: $G$+30%&G&"],
+      "traitEffects": [
+        "Governing Ethics Attraction: $G$+30%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [36, 89]
+      "excludes": [
+        36,
+        89
+      ]
     },
     {
       "traitId": 36,
@@ -369,9 +557,13 @@
       "traitImage": "trait_deviants.png",
       "traitCost": -1,
       "traitDescription": "These people are rebellious in nature and constantly try to challenge the status-quo.",
-      "traitEffects": ["Governing Ethics Attraction: $R$-15%&R&"],
+      "traitEffects": [
+        "Governing Ethics Attraction: $R$-15%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [35]
+      "excludes": [
+        35
+      ]
     },
     {
       "traitId": 37,
@@ -379,9 +571,15 @@
       "traitImage": "trait_venerable.png",
       "traitCost": 4,
       "traitDescription": "This species can grow to an age that commands dignity and respect.",
-      "traitEffects": ["Leader Lifespan: $G$+80 Years&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $G$+80 Years&SP&"
+      ],
       "type": "Organic",
-      "excludes": [38, 39, 89]
+      "excludes": [
+        38,
+        39,
+        89
+      ]
     },
     {
       "traitId": 38,
@@ -389,9 +587,15 @@
       "traitImage": "trait_enduring.png",
       "traitCost": 1,
       "traitDescription": "Lifespans in this species are unusually long.",
-      "traitEffects": ["Leader Lifespan: $G$+20 Years&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $G$+20 Years&SP&"
+      ],
       "type": "Organic",
-      "excludes": [37, 39, 89]
+      "excludes": [
+        37,
+        39,
+        89
+      ]
     },
     {
       "traitId": 39,
@@ -399,9 +603,15 @@
       "traitImage": "trait_fleeting.png",
       "traitCost": -1,
       "traitDescription": "Time is fleeting for this species. What they lack in longevity, they have to make up in other ways.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "If $Y$Lithoid&Y&: $R$-25 Years&R&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "If $Y$Lithoid&SP&: $R$-25 Years&SP&"
+      ],
       "type": "Organic",
-      "excludes": [37, 38]
+      "excludes": [
+        37,
+        38
+      ]
     },
     {
       "traitId": 40,
@@ -409,7 +619,10 @@
       "traitImage": "trait_decadent.png",
       "traitCost": -1,
       "traitDescription": "This species believes that whenever there is hard work that needs doing, that work is always best done by somebody else.",
-      "traitEffects": ["Worker Happiness: $R$-10%&R&", "Slave Happiness: $R$-10%&R&"],
+      "traitEffects": [
+        "Worker Happiness: $R$-10%&SP&",
+        "Slave Happiness: $R$-10%&SP&"
+      ],
       "type": "Organic",
       "excludes": []
     },
@@ -419,9 +632,13 @@
       "traitImage": "trait_resilient.png",
       "traitCost": 1,
       "traitDescription": "Members of this species are physiologically resilient, and will fight like enraged brood mothers to defend their worlds.",
-      "traitEffects": ["Defense Army Damage: $G$+50%&G&"],
+      "traitEffects": [
+        "$ARMY$Defense Army Damage: $G$+50%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 42,
@@ -429,9 +646,14 @@
       "traitImage": "trait_conservational.png",
       "traitCost": 1,
       "traitDescription": "Members of this species believe that resources must be conserved and recycled.",
-      "traitEffects": ["Pop Consumer Goods Upkeep: $G$-10%&G&"],
+      "traitEffects": [
+        "$CONS$Pop Consumer Goods Upkeep: $G$-10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [43, 89]
+      "excludes": [
+        43,
+        89
+      ]
     },
     {
       "traitId": 43,
@@ -439,9 +661,13 @@
       "traitImage": "trait_wasteful.png",
       "traitCost": -1,
       "traitDescription": "Members of this species seemingly have no concept of frugality and are prone to useless consumption.",
-      "traitEffects": ["Pop Consumer Goods Upkeep: $R$+10%&R&"],
+      "traitEffects": [
+        "$CONS$Pop Consumer Goods Upkeep: $R$+10%&SP&"
+      ],
       "type": "Organic",
-      "excludes": [42]
+      "excludes": [
+        42
+      ]
     },
     {
       "traitId": 44,
@@ -449,9 +675,14 @@
       "traitImage": "trait_inorganic_breath.png",
       "traitCost": 3,
       "traitDescription": "The slightly toxic digestive methods of this species have resulted in a highly exotic breath composition.",
-      "traitEffects": ["Pop Upkeep: $R$+50%&R&", "Each pop working as a slave or better produces 0.02 $Y$Exotic Gases&Y& per month."],
+      "traitEffects": [
+        "$POP$Pop Upkeep: $R$+50%&SP&",
+        "Each pop working as a slave or better produces 0.02 $GAS$$Y$Exotic Gases&SP& per month."
+      ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 45,
@@ -460,15 +691,17 @@
       "traitCost": 1,
       "traitDescription": "Extremely unpleasant to be in the vicinity of, beings with this trait take vindication from being insufferable to everyone else.",
       "traitEffects": [
-        "Species Minimum Habitability: $G$+30%&G&", 
-        "Species Habitability Cap: $R$-30%&R&", 
-        "Army Damage: $G$+50%&G&", 
-        "Pop Housing Usage: $R$+10%&R&",
-        "Happiness to non-$Y$Noxious&Y& pops: $R$-1.00%&R&",
-        "Happiness per non-$Y$Noxious&Y& pops (excluding Pops unaffected by happiness): $G$2.00%&G& (max: $G$+40%&G&)"
+        "Species Minimum Habitability: $G$+30%&SP&",
+        "Species Habitability Cap: $R$-30%&SP&",
+        "$ARMY$Army Damage: $G$+50%&SP&",
+        "$H$Pop Housing Usage: $R$+10%&SP&",
+        "Happiness to non-$Y$Noxious&SP& pops: $R$-1.00%&SP&",
+        "Happiness per non-$Y$Noxious&SP& pops (excluding Pops unaffected by happiness): $G$2.00%&SP& (max: $G$+40%&SP&)"
       ],
       "type": "Organic",
-      "excludes": [89]
+      "excludes": [
+        89
+      ]
     },
     {
       "traitId": 46,
@@ -477,10 +710,10 @@
       "traitCost": 0,
       "traitDescription": "This species is made up of the executive terminals of a single Machine Intelligence, originally built by organics.",
       "traitEffects": [
-        "This trait is $O$required&O& for $Y$Machines&Y&",
-        "Habitability: $G$+200%&G&", 
-        "$C$Leaders&C& from this species are $G$Immortal&G& and will not die of old age.",
-        "$Y$Not Affected by Happiness&Y&."
+        "This trait is $O$required&SP& for $Y$Machines&SP&",
+        "Habitability: $G$+200%&SP&",
+        "$C$Leaders&SP& from this species are $G$Immortal&SP& and will not die of old age.",
+        "$Y$Not Affected by Happiness&SP&."
       ],
       "type": "Machine",
       "excludes": []
@@ -491,7 +724,9 @@
       "traitImage": "trait_robot_power_drills.png",
       "traitCost": 2,
       "traitDescription": "Outfit a robot with a battery of power drills, and everything looks like a mineral deposit.",
-      "traitEffects": ["Minerals from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$M$Minerals from Jobs: $G$+15%&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -501,7 +736,9 @@
       "traitImage": "trait_robot_harvesters.png",
       "traitCost": 2,
       "traitDescription": "A suite of tools, from nutrient solution diagnostics and on-site balancing to per-stalk micro-threshing, enables robotic workers to increase produce yields.",
-      "traitEffects": ["Food from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$F$Food from Jobs: $G$+15%&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -511,7 +748,9 @@
       "traitImage": "trait_robot_superconductive.png",
       "traitCost": 2,
       "traitDescription": "The use of superconductive materials in units has cut energy transmission losses to zero percent.",
-      "traitEffects": ["Energy from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "$E$Energy from Jobs: $G$+15%&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -521,7 +760,9 @@
       "traitImage": "trait_robot_efficient_processors.png",
       "traitCost": 3,
       "traitDescription": "These highly efficient processors increase the potential workload and endurance of all units.",
-      "traitEffects": ["Resources from Jobs: $G$+5%&G&"],
+      "traitEffects": [
+        "$RES$Resources from Jobs: $G$+5%&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -531,7 +772,9 @@
       "traitImage": "trait_robot_logic_engines.png",
       "traitCost": 2,
       "traitDescription": "Efficiently navigating the increasingly complex frontiers of science requires new states, beyond the simple half-truths of ternary and quaternary logic.",
-      "traitEffects": ["Research from Jobs: $G$+10%&G&"],
+      "traitEffects": [
+        "$TECH$Research from Jobs: $G$+10%&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -541,7 +784,10 @@
       "traitImage": "trait_robot_enhanced_memory.png",
       "traitCost": 2,
       "traitDescription": "All autonomous units are fitted with memory cells using a revolutionary new technique for magnetic induction, improving their performance significantly.",
-      "traitEffects": ["Leader Upkeep: $G$-25%&G&", "Leader Maximum Negative Traits: $G$-1&G&"],
+      "traitEffects": [
+        "Leader Upkeep: $G$-25%&SP&",
+        "Leader Maximum Negative Traits: $G$-1&SP&"
+      ],
       "type": "Machine",
       "excludes": []
     },
@@ -551,9 +797,13 @@
       "traitImage": "trait_robot_double_jointed.png",
       "traitCost": 1,
       "traitDescription": "Collapsible labor units with flexible joints that enable them to fold neatly into stacks during transportation, then self-assemble on site.",
-      "traitEffects": ["Pop Housing Usage: $G$-10%&G&"],
+      "traitEffects": [
+        "$H$Pop Housing Usage: $G$-10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [54]
+      "excludes": [
+        54
+      ]
     },
     {
       "traitId": 54,
@@ -561,9 +811,13 @@
       "traitImage": "trait_robot_bulky.png",
       "traitCost": -1,
       "traitDescription": "These highly advanced mega-machines were not designed to traverse the universe in a box.",
-      "traitEffects": ["Pop Housing Usage: $R$+10%&R&"],
+      "traitEffects": [
+        "$H$Pop Housing Usage: $R$+10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [53]
+      "excludes": [
+        53
+      ]
     },
     {
       "traitId": 55,
@@ -571,9 +825,13 @@
       "traitImage": "trait_robot_emotion_emulators.png",
       "traitCost": 1,
       "traitDescription": "Complex social predictive models help autonomous units to not only emulate appropriate emotions but to elicit favorable responses from organics and synthetics alike.",
-      "traitEffects": ["Amenities from Jobs: $G$+20%&G&"],
+      "traitEffects": [
+        "$RAM$Amenities from Jobs: $G$+20%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [56]
+      "excludes": [
+        56
+      ]
     },
     {
       "traitId": 56,
@@ -581,9 +839,13 @@
       "traitImage": "trait_robot_uncanny.png",
       "traitCost": -1,
       "traitDescription": "These monstrous machines were created in the image of one of the most horrific species in the universe, and the resemblance is uncanny.",
-      "traitEffects": ["Amenities from Jobs: $R$-20%&R&"],
+      "traitEffects": [
+        "$RAM$Amenities from Jobs: $R$-20%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [55]
+      "excludes": [
+        55
+      ]
     },
     {
       "traitId": 57,
@@ -591,9 +853,13 @@
       "traitImage": "trait_robot_durable.png",
       "traitCost": 1,
       "traitDescription": "Protected by exoskeletons of chrome-plated titanium, these heavy-duty machines were designed to excel under harsh conditions and require less maintenance.",
-      "traitEffects": ["Robot Upkeep: $G$-10%&G&"],
+      "traitEffects": [
+        "Robot Upkeep: $G$-10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [58]
+      "excludes": [
+        58
+      ]
     },
     {
       "traitId": 58,
@@ -601,9 +867,13 @@
       "traitImage": "trait_robot_high_maintenance.png",
       "traitCost": -1,
       "traitDescription": "These machines were designed with a complete disregard for longevity and are prone to malfunction. They will require frequent maintenance.",
-      "traitEffects": ["Robot Upkeep: $R$+10%&R&"],
+      "traitEffects": [
+        "Robot Upkeep: $R$+10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [57]
+      "excludes": [
+        57
+      ]
     },
     {
       "traitId": 59,
@@ -611,9 +881,13 @@
       "traitImage": "trait_robot_learning_algorithms.png",
       "traitCost": 1,
       "traitDescription": "Sophisticated, self-learning algorithms that stimulate the rapid evolution of a unit's neural clusters.",
-      "traitEffects": ["Leader Experience Gain: $G$+25%&G&"],
+      "traitEffects": [
+        "Leader Experience Gain: $G$+25%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [60]
+      "excludes": [
+        60
+      ]
     },
     {
       "traitId": 60,
@@ -621,9 +895,13 @@
       "traitImage": "trait_robot_repurposed_hardware.png",
       "traitCost": -1,
       "traitDescription": "Designed to meet the very specific needs of their creators, this line of machines were never intended to have the capacity for higher reasoning, and retrofitting will only get them so far.",
-      "traitEffects": ["Leader Experience Gain: $R$-25%&R&"],
+      "traitEffects": [
+        "Leader Experience Gain: $R$-25%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [59]
+      "excludes": [
+        59
+      ]
     },
     {
       "traitId": 61,
@@ -631,9 +909,13 @@
       "traitImage": "trait_robot_mass_produced.png",
       "traitCost": 1,
       "traitDescription": "Streamlined production cycles and modular designs allow for unit mass-production at an unprecedented rate.",
-      "traitEffects": ["Mechanical Pop Assembly Speed: $G$+15%&G&"],
+      "traitEffects": [
+        "Mechanical Pop Assembly Speed: $G$+15%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [62]
+      "excludes": [
+        62
+      ]
     },
     {
       "traitId": 62,
@@ -641,9 +923,13 @@
       "traitImage": "trait_robot_custom_made.png",
       "traitCost": -1,
       "traitDescription": "Each new unit is crafted with unparalleled attention to detail. A marvel of engineering and art, but not very efficient.",
-      "traitEffects": ["Mechanical Pop Assembly Speed: $R$-15%&R&"],
+      "traitEffects": [
+        "Mechanical Pop Assembly Speed: $R$-15%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [61]
+      "excludes": [
+        61
+      ]
     },
     {
       "traitId": 63,
@@ -651,9 +937,13 @@
       "traitImage": "trait_robot_recycled.png",
       "traitCost": 2,
       "traitDescription": "Unit manufacturing has been optimized to be as cost-effective as possible, using recycled materials, and components inherited from previous generations.",
-      "traitEffects": ["Pop Assembly Cost: $G$-20%&G&"],
+      "traitEffects": [
+        "Pop Assembly Cost: $G$-20%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [64]
+      "excludes": [
+        64
+      ]
     },
     {
       "traitId": 64,
@@ -661,9 +951,13 @@
       "traitImage": "trait_robot_luxurious.png",
       "traitCost": -2,
       "traitDescription": "Designed after the principle that you cannot put a price on quality, these first-rate units are costly, but shiny.",
-      "traitEffects": ["Pop Assembly Cost: $R$+20%&R&"],
+      "traitEffects": [
+        "Pop Assembly Cost: $R$+20%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [63]
+      "excludes": [
+        63
+      ]
     },
     {
       "traitId": 65,
@@ -671,9 +965,13 @@
       "traitImage": "trait_robot_streamlined_protocols.png",
       "traitCost": 2,
       "traitDescription": "Extensively batched AI processes allow these units to scale greatly in numbers with minimal loss of efficiency.",
-      "traitEffects": ["Empire Size from Pops: $G$-10%&G&"],
+      "traitEffects": [
+        "$EMP$Empire Size from Pops: $G$-10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [66]
+      "excludes": [
+        66
+      ]
     },
     {
       "traitId": 66,
@@ -681,9 +979,13 @@
       "traitImage": "trait_robot_high_bandwidth.png",
       "traitCost": -2,
       "traitDescription": "Each individual unit sends and receives a large amount of largely duplicate data, causing exponential lag as the number of units attached to each central processing hub increases.",
-      "traitEffects": ["Empire Size from Pops: $R$+10%&R&"],
+      "traitEffects": [
+        "$EMP$Empire Size from Pops: $R$+10%&SP&"
+      ],
       "type": "Machine",
-      "excludes": [65]
+      "excludes": [
+        65
+      ]
     },
     {
       "traitId": 67,
@@ -692,16 +994,19 @@
       "traitCost": 0,
       "traitDescription": "This species has a silicon based biology, and consumes minerals rather than food. They are tougher than traditional organics and have slower metabolisms, making them long lived but slow to reproduce.",
       "traitEffects": [
-        "This trait is $O$required&O& for $Y$Lithoids&Y&",
-        "Consumes $Y$Minerals&Y& instead of $Y$Food&Y&",
-        "Pop Growth Speed: $R$-25%&R&",
-        "Pop Assembly Speed: $R$-25%&R&",
-        "Habitability: $G$+50%&G&",
-        "Army Health: $G$+50%&G&",
-        "Leader Lifespan: $G$+50 Years&G&"
+        "This trait is $O$required&SP& for $Y$Lithoids&SP&",
+        "Consumes $M$$Y$Minerals&SP& instead of $F$$Y$Food&SP&",
+        "$POP$Pop Growth Speed: $R$-25%&SP&",
+        "Pop Assembly Speed: $R$-25%&SP&",
+        "Habitability: $G$+50%&SP&",
+        "$ARMY$Army Health: $G$+50%&SP&",
+        "Leader Lifespan: $G$+50 Years&SP&"
       ],
       "type": "Lithoid",
-      "excludes": [13, 14]
+      "excludes": [
+        13,
+        14
+      ]
     },
     {
       "traitId": 68,
@@ -709,9 +1014,14 @@
       "traitImage": "trait_lithoid_scintillating.png",
       "traitCost": 2,
       "traitDescription": "The outermost layer of this species is studded with sparkling crystals and gemstones that occasionally flake off.",
-      "traitEffects": ["Each pop working as a slave or better produces 0.01 $Y$Rare Crystals&Y& per month."],
+      "traitEffects": [
+        "Each pop working as a slave or better produces 0.01 $CRY$$Y$Rare Crystals&SP& per month."
+      ],
       "type": "Lithoid",
-      "excludes": [69, 70]
+      "excludes": [
+        69,
+        70
+      ]
     },
     {
       "traitId": 69,
@@ -719,9 +1029,14 @@
       "traitImage": "trait_lithoid_gaseous_byproducts.png",
       "traitCost": 2,
       "traitDescription": "The metabolic processes of this species cause regular venting of gases useful to industry.",
-      "traitEffects": ["Each pop working as a slave or better produces 0.01 $Y$Exotic Gases&Y& per month."],
+      "traitEffects": [
+        "Each pop working as a slave or better produces 0.01 $GAS$$Y$Exotic Gases&SP& per month."
+      ],
       "type": "Lithoid",
-      "excludes": [68, 70]
+      "excludes": [
+        68,
+        70
+      ]
     },
     {
       "traitId": 70,
@@ -729,9 +1044,14 @@
       "traitImage": "trait_lithoid_volatile_excretions.png",
       "traitCost": 2,
       "traitDescription": "The highly compressed spoor created by this species is unstable and contains an unbelievable amount of power.",
-      "traitEffects": ["Each pop working as a slave or better produces 0.01 $Y$Volatile Motes&Y& per month."],
+      "traitEffects": [
+        "Each pop working as a slave or better produces 0.01 $MOT$$Y$Volatile Motes&SP& per month."
+      ],
       "type": "Lithoid",
-      "excludes": [68, 69]
+      "excludes": [
+        68,
+        69
+      ]
     },
     {
       "traitId": 71,
@@ -740,12 +1060,15 @@
       "traitCost": 2,
       "traitDescription": "With crystalline growths, this species is capable of generating self replicating lattices of themselves, in addition to the more usual reproductive methods.",
       "traitEffects": [
-        "Each pop working as a slave or better produces 0.02 $Y$Monthly Organic Pop Assembly&Y&.",
-        "This stacks with other sources of $Y$Monthly Organic Pop Assembly&Y& such as $O$Clone Vats&O& or $O$Spawning Drones&O&.",
-        "The $O$Lithoid Trait&O& modifies this trait's effect."
+        "Each pop working as a slave or better produces 0.02 $Y$Monthly Organic Pop Assembly&SP&.",
+        "This stacks with other sources of $Y$Monthly Organic Pop Assembly&SP& such as $O$Clone Vats&SP& or $O$Spawning Drones&SP&.",
+        "The $O$Lithoid Trait&SP& modifies this trait's effect."
       ],
       "type": "Lithoid",
-      "excludes": [15, 16]
+      "excludes": [
+        15,
+        16
+      ]
     },
     {
       "traitId": 72,
@@ -754,10 +1077,10 @@
       "traitCost": 2,
       "traitDescription": "This species is sustained by a combination of both food and low-energy radiation, and as such can thrive on the most inhospitable of worlds.",
       "traitEffects": [
-        "Replaces $Y$50%&Y& of Base $Y$Minerals&Y& Upkeep with $Y$Energy&Y& Upkeep.",
-        "This $Y$Energy&Y& upkeep is removed for Pops living on $Y$Tomb Worlds&Y&.",
-        "Pop Growth Speed on $Y$Tomb Worlds&Y&: $G$+10%&G&",
-        "Tomb World Habitability: $G$+10%&G&"
+        "Replaces $Y$50%&SP& of Base $M$$Y$Minerals&SP& Upkeep with $E$$Y$Energy&SP& Upkeep.",
+        "This $E$$Y$Energy&SP& upkeep is removed for Pops living on $Y$Tomb Worlds&SP&.",
+        "$POP$Pop Growth Speed on $Y$Tomb Worlds&SP&: $G$+10%&SP&",
+        "Tomb World Habitability: $G$+10%&SP&"
       ],
       "type": "Lithoid",
       "excludes": []
@@ -768,7 +1091,10 @@
       "traitImage": "trait_spliced_adaptability.png",
       "traitCost": 1,
       "traitDescription": "A few genetic snips and slices here and there and they can survive nearly anywhere. The process comes with an acceptable number of deaths from side effects.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Habitability: $G$+20%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "Habitability: $G$+20%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -778,7 +1104,11 @@
       "traitImage": "trait_juiced_power.png",
       "traitCost": 1,
       "traitDescription": "Adrenaline released on demand and hyper-potent growth hormones have led to a massive increase in strength. Just ignore the occasional internal tearing.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Army Damage: $G$+40%&G&", "Worker Pop Resource Output: $G$+5%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$ARMY$Army Damage: $G$+40%&SP&",
+        "Worker Pop Resource Output: $G$+5%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -788,7 +1118,10 @@
       "traitImage": "trait_farm_hands.png",
       "traitCost": 1,
       "traitDescription": "The more appendages, the higher the farming output. Some appendages can even operate while their host is asleep. Rumors of hosts strangled by their new limbs have been deemed unfounded in our latest investigation.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Food from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$F$Food from Jobs: $G$+15%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -798,7 +1131,10 @@
       "traitImage": "trait_crack_miner.png",
       "traitCost": 1,
       "traitDescription": "Supreme hand-eye coordination, near endless endurance and self-purifying lungs have created entire crack teams of miners. Sadly they get brittle without sunlight.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Minerals from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$M$Minerals from Jobs: $G$+15%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -808,7 +1144,10 @@
       "traitImage": "trait_technical_skill.png",
       "traitCost": 1,
       "traitDescription": "Extra internal organs grant a vastly increased innate sensitivity to electricity and magnetic fields. Reports of recipients hearing screams and voices from the reactors should be ignored.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Energy from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$E$Energy from Jobs: $G$+15%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -818,7 +1157,10 @@
       "traitImage": "trait_cra.png",
       "traitCost": 1,
       "traitDescription": "Slightly shifted facial features, a mix of enhanced and slackened muscular development - and of course outside chemicals - have created the perfect smile. Forever.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Amenities from Jobs: $G$+15%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$AM$Amenities from Jobs: $G$+15%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -828,7 +1170,10 @@
       "traitImage": "trait_low_maintenance.png",
       "traitCost": 1,
       "traitDescription": "Reduced consumption, excretion, and rest rates have resulted in twice the beings for half the price. However, demand for protein-rich meals has increased.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Pop Consumer Goods Upkeep: $G$-10%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$CONS$Pop Consumer Goods Upkeep: $G$-10%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -838,7 +1183,10 @@
       "traitImage": "trait_augmented_intelligence.png",
       "traitCost": 1,
       "traitDescription": "More brains equals more brain power. Extra thinking organs have been added in strategic areas of the recipient's body to ensure maximum cognitive capacity. Even if they don't always agree.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Research from Jobs: $G$+10%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$TECH$Research from Jobs: $G$+10%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -848,7 +1196,10 @@
       "traitImage": "trait_gene_mentorship.png",
       "traitCost": 1,
       "traitDescription": "By combining genetically redesigned 'instinctive knowledge' and outside chemical stimuli, we have succeeded in vastly accelerating our learning capacities. Although it has resulted in some extremely paranoid individuals.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Leader Experience Gain: $G$+25%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "Leader Experience Gain: $G$+25%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -858,7 +1209,10 @@
       "traitImage": "trait_expresed_tradition.png",
       "traitCost": 1,
       "traitDescription": "Fanaticism on demand: faith is merely a cocktail of hormones, one we have perfected. Where that faith eventually leads is a matter of subsequent guidance.",
-      "traitEffects": ["Leader Lifespan: $R$-10 Years&R&", "Unity from Jobs: $G$+10%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-10 Years&SP&",
+        "$UNI$Unity from Jobs: $G$+10%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -869,10 +1223,10 @@
       "traitCost": 2,
       "traitDescription": "As a computational device, a brain does not run at 100% capacity. However, we have gone beyond the standard usage. If issues are encountered, try turning it off and on again.",
       "traitEffects": [
-        "Leader Lifespan: $R$-30 Years&R&", 
-        "Leader Upkeep: $G$-25%&G&",
-        "Leader Maximum Negative Traits: $G$-1&G&",
-        "Research from Jobs: $G$+20%&G&"
+        "Leader Lifespan: $R$-30 Years&SP&",
+        "Leader Upkeep: $G$-25%&SP&",
+        "Leader Maximum Negative Traits: $G$-1&SP&",
+        "$TECH$Research from Jobs: $G$+20%&SP&"
       ],
       "type": "Overtuned",
       "excludes": []
@@ -883,7 +1237,11 @@
       "traitImage": "trait_preplanned_growth.png",
       "traitCost": 2,
       "traitDescription": "Scheduled fertility, scheduled interest, scheduled compatibility. Population growth on demand for a strong and stable population - with a few minor edits here and there. Jealous individuals are to be directed to the nearest Fertility Center for mandatory training.",
-      "traitEffects": ["Leader Lifespan: $R$-30 Years&R&", "Pop Growth Speed: $G$+30%&G&", "Pop Housing Usage: $G$-10%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-30 Years&SP&",
+        "$POP$Pop Growth Speed: $G$+30%&SP&",
+        "$H$Pop Housing Usage: $G$-10%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -893,7 +1251,11 @@
       "traitImage": "trait_excessive_endurance.png",
       "traitCost": 3,
       "traitDescription": "The greatest in adaptability genes have been hyper-expressed in these specimens. Mutation rates around 30% indicate a somewhat stable and successful experiment.",
-      "traitEffects": ["Leader Lifespan: $R$-30 Years&R&", "Habitability: $G$+30%&G&", "Resources from Jobs: $G$+5%&G&"],
+      "traitEffects": [
+        "Leader Lifespan: $R$-30 Years&SP&",
+        "Habitability: $G$+30%&SP&",
+        "$RES$Resources from Jobs: $G$+5%&SP&"
+      ],
       "type": "Overtuned",
       "excludes": []
     },
@@ -903,9 +1265,13 @@
       "traitImage": "trait_plantoid_phototrophic.png",
       "traitCost": 1,
       "traitDescription": "This species is sustained by a combination of both food and sunlight.",
-      "traitEffects": ["Replaces $Y$50%&Y& of Base $Y$Food&Y& Upkeep with $Y$Energy&Y& Upkeep."],
+      "traitEffects": [
+        "Replaces $Y$50%&SP& of Base $F$$Y$Food&SP& Upkeep with $E$$Y$Energy&SP& Upkeep."
+      ],
       "type": "Botanical",
-      "excludes": [87]
+      "excludes": [
+        87
+      ]
     },
     {
       "traitId": 87,
@@ -914,13 +1280,15 @@
       "traitCost": 2,
       "traitDescription": "This species is sustained by a combination of both food and low-energy radiation, and as such can thrive on the most inhospitable of worlds.",
       "traitEffects": [
-        "Replaces $Y$50%&Y& of Base $Y$Food&Y& Upkeep with $Y$Energy&Y& Upkeep.",
-        "This $Y$Energy&Y& upkeep is removed for Pops living on $Y$Tomb Worlds&Y&.",
-        "Pop Growth Speed on $Y$Tomb Worlds&Y&: $G$+10%&G&",
-        "Tomb World Habitability: $G$+10%&G&"
+        "Replaces $Y$50%&SP& of Base $F$$Y$Food&SP& Upkeep with $E$$Y$Energy&SP& Upkeep.",
+        "This $E$$Y$Energy&SP& upkeep is removed for Pops living on $Y$Tomb Worlds&SP&.",
+        "$POP$Pop Growth Speed on $Y$Tomb Worlds&SP&: $G$+10%&SP&",
+        "Tomb World Habitability: $G$+10%&SP&"
       ],
       "type": "Botanical",
-      "excludes": [86]
+      "excludes": [
+        86
+      ]
     },
     {
       "traitId": 88,
@@ -929,11 +1297,16 @@
       "traitCost": 2,
       "traitDescription": "This species is capable of reproduction by budding, in addition to the more usual fertilization of seeds or spores.",
       "traitEffects": [
-        "Each pop working as a slave or better produces 0.02 $Y$Monthly Organic Pop Assembly&Y&.",
-        "This stacks with other sources of $Y$Monthly Organic Pop Assembly&Y& such as $O$Clone Vats&O& or $O$Spawning Drones&O&."
+        "Each pop working as a slave or better produces 0.02 $Y$Monthly Organic Pop Assembly&SP&.",
+        "This stacks with other sources of $Y$Monthly Organic Pop Assembly&SP& such as $O$Clone Vats&SP& or $O$Spawning Drones&SP&."
       ],
       "type": "Botanical",
-      "excludes": [13, 14, 15, 16]
+      "excludes": [
+        13,
+        14,
+        15,
+        16
+      ]
     },
     {
       "traitId": 89,
@@ -942,15 +1315,41 @@
       "traitCost": 2,
       "traitDescription": "Rapid reproduction. High dispersal ability. Zero useful capabilities.",
       "traitEffects": [
-        "$Y$Can only select negative or botanical traits&Y&.",
-        "Habitability: $G$+5%&G& for each negative trait selected.",
-        "Pop Growth Speed: $G$+5%&G& for each negative trait selected"
+        "$Y$Can only select negative or botanical traits&SP&.",
+        "Habitability: $G$+5%&SP& for each negative trait selected.",
+        "$POP$Pop Growth Speed: $G$+5%&SP& for each negative trait selected"
       ],
       "type": "Botanical",
       "excludes": [
-        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 18, 
-        20, 22, 24, 26, 27, 29, 31, 33, 35, 37, 38, 41, 
-        42, 44, 45
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        38,
+        41,
+        42,
+        44,
+        45
       ]
     }
   ]

@@ -27,7 +27,7 @@ export default function App() {
           />
         </div>
         <div className="w-11/12 h-5/6 bg-black/50 text-white backdrop-blur-sm flex flex-col z-0">
-          <div className="h-1/2 text-center">
+          <div className="h-1/2 text-center z-0">
             <EmpireDisplay />
           </div>
           <div className="h-1/2 border bg-black/50 border-blue-600">
