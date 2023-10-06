@@ -1,0 +1,113 @@
+{
+  "iconsURL": "/images/planets/icons/",
+  "planetList": [
+    {
+      "planetId": 1,
+      "planetName": "Desert World",
+      "planetURL": "/images/planets/desert/",
+      "planetIcon": "desert_preference.png",
+      "planetIconDescription": "Desert Preference",
+      "planetSky": "desert_sky.png",
+      "planetSmall": "desert_small.png",
+      "planetType": "Dry",
+      "planetClimate": "(Dry Climate)",
+      "planetDescription": "Dry, rocky world with a nitrogen-oxygen atmosphere. Precipitation and major bodies of surface water are relatively rare. Significant temperature variations between day and night cycles. Vegetation is scarce, but even moderate precipitation can make the deser bloom."
+    },
+    {
+      "planetId": 2,
+      "planetName": "Arid World",
+      "planetURL": "/images/planets/arid/",
+      "planetIcon": "arid_preference.png",
+      "planetIconDescription": "Arid Preference",
+      "planetSky": "arid_sky.png",
+      "planetSmall": "arid_small.png",
+      "planetType": "Dry",
+      "planetClimate": "(Dry Climate)",
+      "planetDescription": "Dry, rocky world with a nitrogen-oxygen atmosphere. The dust covered terrain consists largel of mesas and canyons. Forests can be found in the more temperate polar regions, but vegetation is otherwise scarce."
+    },
+    {
+      "planetId": 3,
+      "planetName": "Savanna World",
+      "planetURL": "/images/planets/savanna/",
+      "planetIcon": "savannah_preference.png",
+      "planetIconDescription": "Savanna Preference",
+      "planetSky": "savanna_sky.png",
+      "planetSmall": "savanna_small.png",
+      "planetType": "Dry",
+      "planetClimate": "(Dry Climate)",
+      "planetDescription": "Rocky world dominated by dry, arid plains covered by a nitrogen-oxygen atmosphere. The small hydrosphere allows for brief wet seasons, but aside from a few ubiquitous grasses, vegetation is largely concentrated around shallow oases."
+    },
+    {
+      "planetId": 4,
+      "planetName": "Ocean World",
+      "planetURL": "/images/planets/ocean/",
+      "planetIcon": "ocean_preference.png",
+      "planetIconDescription": "Ocean Preference",
+      "planetSky": "ocean_sky.png",
+      "planetSmall": "ocean_small.png",
+      "planetType": "Wet",
+      "planetClimate": "(Wet Climate)",
+      "planetDescription": "Rocky world with a nitrogen-oxygen atmosphere. Oceans cover more than 90% of the surface, with scattered islands making up the remaining percentage."
+    },
+    {
+      "planetId": 5,
+      "planetName": "Continental World",
+      "planetURL": "/images/planets/continental/",
+      "planetIcon": "continental_preference.png",
+      "planetIconDescription": "Continental Preference",
+      "planetSky": "continental_sky.png",
+      "planetSmall": "continental_small.png",
+      "planetType": "Wet",
+      "planetClimate": "(Wet Climate)",
+      "planetDescription": "Rocky world with a nitrogen-oxygen atmosphere. Active and stable hydrosphere. Great landmasses are separated by oceans, with large climate variations depending on latitude and precipitation."
+    },
+    {
+      "planetId": 6,
+      "planetName": "Tropical World",
+      "planetURL": "/images/planets/tropical/",
+      "planetIcon": "tropical_preference.png",
+      "planetIconDescription": "Tropical Preference",
+      "planetSky": "tropical_sky.png",
+      "planetSmall": "tropical_small.png",
+      "planetType": "Wet",
+      "planetClimate": "(Wet Climate)",
+      "planetDescription": "Humid, rocky world with a thick nitrogen-oxygen atmosphere. Seasons with significant precipitation are interchanged with drier periods. Most landmasses are covered in dense vegetation."
+    },
+    {
+      "planetId": 7,
+      "planetName": "Arctic World",
+      "planetURL": "/images/planets/arctic/",
+      "planetIcon": "arctic_preference.png",
+      "planetIconDescription": "Arctic Preference",
+      "planetSky": "arctic_sky.png",
+      "planetSmall": "arctic_small.png",
+      "planetType": "Cold",
+      "planetClimate": "(Frozen Climate)",
+      "planetDescription": "Frigid, rocky world with a nitrogen-oxygen atmosphere. The poles are big, and significant water deposits can be found permanently frozen as glacial ice. However, the planet experiences seasonal variations and the equatorial band is covered by vegetation."
+    },
+    {
+      "planetId": 8,
+      "planetName": "Alpine World",
+      "planetURL": "/images/planets/alpine/",
+      "planetIcon": "alpine_preference.png",
+      "planetIconDescription": "Alpine Preference",
+      "planetSky": "alpine_sky.png",
+      "planetSmall": "alpine_small.png",
+      "planetType": "Cold",
+      "planetClimate": "(Frozen Climate)",
+      "planetDescription": "Mountainous world with a nitrogen-oxygen atmosphere. Snow covers the mountaintops, and frozen-over lakes dot the valleys. While the planet experiences minimal seasonal variations, the still-liquid water beneath the frozen surface of the lakes is enough to sustain some hardy vegetation."
+    },
+    {
+      "planetId": 9,
+      "planetName": "Tundra World",
+      "planetURL": "/images/planets/tundra/",
+      "planetIcon": "tundra_preference.png",
+      "planetIconDescription": "Tundra Preference",
+      "planetSky": "tundra_sky.png",
+      "planetSmall": "tundra_small.png",
+      "planetType": "Cold",
+      "planetClimate": "(Frozen Climate)",
+      "planetDescription": "Cold and rocky world with a nitrogen-oxygen atmosphere. Permafrost covers most of the surface except for the more temperate equatorial regions. A stable biosphere exists but vegetation is mostly limited to mosses and lichens."
+    }
+  ]
+}

@@ -186,6 +186,7 @@ export default function SpeciesTraits() {
     } else if (availableTrait && traitPicks !== 0) {
       selectTraitLogic(availableTrait)
     }
+    window.dispatchEvent(new Event('popstate'))
   }
 
   const handleHoverStatus = (trait, isHovered) => {

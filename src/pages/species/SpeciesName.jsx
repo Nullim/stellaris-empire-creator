@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import GenderSelection from "../../components/GenderSelection";
+import GenderSelection from "./layout/GenderSelection";
 
 export default function SpeciesName() {
   const [name, setName] = useState("");
@@ -29,10 +29,12 @@ export default function SpeciesName() {
     if (newName === "") {
       params.delete('uN');
       window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
       return;
     }
     params.set('uN', newName);
     window.history.replaceState({}, '', `?${params.toString()}`);
+    window.dispatchEvent(new Event('popstate'))
   }
 
   const changeNamePlural = (e) => {
@@ -43,10 +45,12 @@ export default function SpeciesName() {
     if (newPlural === "") {
       params.delete('uP');
       window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
       return;
     }
     params.set('uP', newPlural);
     window.history.replaceState({}, '', `?${params.toString()}`);
+    window.dispatchEvent(new Event('popstate'))
   }
 
   const changeAdjective = (e) => {
@@ -57,10 +61,12 @@ export default function SpeciesName() {
     if (newAdjective === "") {
       params.delete('uA');
       window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
       return;
     }
     params.set('uA', newAdjective);
     window.history.replaceState({}, '', `?${params.toString()}`);
+    window.dispatchEvent(new Event('popstate'))
   }
 
   const changeBiography = (e) => {

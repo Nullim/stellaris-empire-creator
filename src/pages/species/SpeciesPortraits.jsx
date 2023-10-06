@@ -21,6 +21,7 @@ export default function SpeciesPortraits() {
           if (speciesParam === 'Machine' && genderParam) {
             params.delete('sG');
             window.history.replaceState({}, '', `?${params.toString()}`);
+            window.dispatchEvent(new Event('popstate'))
           }
         }
       }
@@ -36,6 +37,7 @@ export default function SpeciesPortraits() {
     if(traitParams && speciesParam !== speciesData.name) {
       params.delete('sT');
       window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
     }
   }
 
@@ -47,6 +49,7 @@ export default function SpeciesPortraits() {
   }
 
   const handlePortraitClick = (portrait) => {
+    if (portrait === selectedPortrait) return;
     setSelectedPortrait(portrait)
     const params = new URLSearchParams(window.location.search);
     params.set('sN', selectedSpeciesData.name);
@@ -55,6 +58,7 @@ export default function SpeciesPortraits() {
       params.delete('sG');
     }
     window.history.replaceState({}, '', `?${params.toString()}`)
+    window.dispatchEvent(new Event('popstate'))
   }
 
   useEffect(() => {

@@ -84,6 +84,7 @@ const GenderSelection = () => {
       window.history.replaceState({}, '', `?${params.toString()}`);
       return newGender;
     });
+    window.dispatchEvent(new Event('popstate'))
   };
 
   return (

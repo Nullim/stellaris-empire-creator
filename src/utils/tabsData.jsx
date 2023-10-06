@@ -3,8 +3,8 @@ import About from "../pages/home/About";
 import SpeciesPortraits from "../pages/species/SpeciesPortraits";
 import SpeciesName from "../pages/species/SpeciesName";
 import SpeciesTraits from "../pages/species/SpeciesTraits";
-import Planet from "../pages/government/Planet";
-import City from "../pages/government/City";
+import Planet from "../pages/homeworld/Planet";
+import City from "../pages/homeworld/City";
 
 const tabsData = [
   {
