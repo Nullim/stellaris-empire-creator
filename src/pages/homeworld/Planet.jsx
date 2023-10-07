@@ -34,6 +34,12 @@ export default function Planet() {
     const nameToSet = e.target.value;
     setPlanetName(nameToSet);
     const params = new URLSearchParams(window.location.search);
+    if (nameToSet === "") {
+      params.delete('hPN');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
+      return;
+    }
     params.set('hPN', nameToSet);
     window.history.replaceState({}, '', `?${params.toString()}`)
     window.dispatchEvent(new Event('popstate'))
@@ -43,6 +49,12 @@ export default function Planet() {
     const nameToSet = e.target.value;
     setStarName(nameToSet);
     const params = new URLSearchParams(window.location.search);
+    if (nameToSet === "") {
+      params.delete('hSN');
+      window.history.replaceState({}, '', `?${params.toString()}`);
+      window.dispatchEvent(new Event('popstate'))
+      return;
+    }
     params.set('hSN', nameToSet);
     window.history.replaceState({}, '', `?${params.toString()}`)
     window.dispatchEvent(new Event('popstate'))
