@@ -1,0 +1,65 @@
+{
+  "baseURL": "/images/cities/",
+  "cityList":[
+    {
+      "cityId": 1,
+      "cityName": "Aquatic",
+      "ecumenopolis": "aquatic/aquatic_ecumenopolis.png"
+    },
+    {
+      "cityId": 2,
+      "cityName": "Arthropoid",
+      "ecumenopolis": "arthropoid/arthropoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 3,
+      "cityName": "Avian",
+      "ecumenopolis": "avian/avian_ecumenopolis.png"
+    },
+    {
+      "cityId": 4,
+      "cityName": "Fungoid",
+      "ecumenopolis": "fungoid/fungoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 5,
+      "cityName": "Humanoid",
+      "ecumenopolis": "humanoid/humanoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 6,
+      "cityName": "Lithoid",
+      "ecumenopolis": "lithoid/lithoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 7,
+      "cityName": "Mammalian",
+      "ecumenopolis": "mammalian/mammalian_ecumenopolis.png"
+    },
+    {
+      "cityId": 8,
+      "cityName": "Molluscoid",
+      "ecumenopolis": "molluscoid/molluscoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 9,
+      "cityName": "Necroid",
+      "ecumenopolis": "necroid/necroid_ecumenopolis.png"
+    },
+    {
+      "cityId": 10,
+      "cityName": "Plantoid",
+      "ecumenopolis": "plantoid/plantoid_ecumenopolis.png"
+    },
+    {
+      "cityId": 11,
+      "cityName": "Reptilian",
+      "ecumenopolis": "reptilian/reptilian_ecumenopolis.png"
+    },
+    {
+      "cityId": 12,
+      "cityName": "Toxoid",
+      "ecumenopolis": "toxoid/toxoid_ecumenopolis.png"
+    }
+  ]
+}

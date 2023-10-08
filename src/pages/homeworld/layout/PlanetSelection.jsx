@@ -11,9 +11,9 @@ export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, 
     const validatedPlanetTypes = planetsToDisplay.every(isPlanetTypeIdentical)
   
     return (
-      <div className="flex flex-col h-full w-full">
-        <span className={`${planetTypeColorSelector(planetType, validatedPlanetTypes)} select-none`}>{planetType}</span>
-        <div className="flex flex-col items-center w-full h-full bg-black/40">
+      <div className="flex flex-col h-full w-full mx-2">
+        <span className={`${planetTypeColorSelector(planetType, validatedPlanetTypes)} m-0 select-none`}>{planetType}</span>
+        <div className="flex flex-col items-center w-full h-full">
           {planetsToDisplay.map((planet) => (
             <div
               key={planet.planetId}
@@ -21,7 +21,7 @@ export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, 
               onMouseEnter={() => handleHoverStatus(planet, true)}
               onMouseLeave={() => handleHoverStatus(planet, false)}
               onClick={() => handlePlanetClick(planet)}
-              className={`bg-cover w-full h-full object-contain border ${planet === selectedPlanet ? 'border-cyan-400' : 'border-gray-500'}`}
+              className={`bg-cover w-full h-full mb-2 object-contain border-2 ${planet === selectedPlanet ? 'border-cyan-400' : 'border-gray-500'}`}
             >
               <img src={planet.planetURL + planet.planetSmall} className="max-w-full h-full object-contain object-bottom" />
             </div>

@@ -7,7 +7,7 @@ import planets from "../../utils/planets.json";
 export default function Planet() {
   const [planetName, setPlanetName] = useState('');
   const [starName, setStarName] = useState('');
-  const [selectedPlanet, setSelectedPlanet] = useState();
+  const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [hoveredPlanet, setHoveredPlanet] = useState(null)
 
   useEffect(() => {
@@ -21,7 +21,6 @@ export default function Planet() {
       if (starNameParam) setStarName(starNameParam);
       if (selectedPlanetParam) {
         const planetFound = planets.planetList.find((planet) => planet.planetId === parseInt(selectedPlanetParam))
-        console.log("Planet Found value:", planetFound)
         if (planetFound) {
           setSelectedPlanet(planetFound)
         }
@@ -116,7 +115,7 @@ export default function Planet() {
       <div className="flex w-full mb-1">
         <div className="flex flex-col w-1/4">
           <span className="text-center">Planet Type</span>
-          <div className="flex-grow border-2 border-gray-500 bg-black/40 p-2 font-normal max-h-60 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
+          <div className="flex-grow border-2 border-gray-500 bg-black/40 p-2 font-normal max-h-64 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
             {hoveredPlanet ? (
               <PlanetDescription planet={hoveredPlanet} />
             ) : selectedPlanet ? (
