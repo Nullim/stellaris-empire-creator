@@ -1,25 +1,66 @@
 import { useState, useEffect } from "react";
 
 import CitySelection from "./layout/CitySelection";
-import cities from "../../utils/cities.json"
+import cities from "../../utils/cities.json";
+import rooms from "../../utils/rooms.json";
+
+const UI_BASE = '/images/ui/'
 
 export default function City() {
   const [selectedCity, setSelectedCity] = useState(null)
+  const [currentRoom, setCurrentRoom] = useState(null);
+  const [currentRoomIndex, setCurrentRoomIndex] = useState(0)
+  const [isLeftHovered, setIsLeftHovered] = useState(false)
+  const [isRightHovered, setIsRightHovered] = useState(false)
+  const roomList = rooms.roomList;
 
   useEffect(() => {
     const getParamsFromURL = () => {
       const params = new URLSearchParams(window.location.search);
-      const selectedCityParam = params.get('hP');
+      const selectedCityParam = params.get('hC');
+      const selectedRoomParam = params.get('hR');
 
       if (selectedCityParam) {
         const cityFound = cities.cityList.find((city) => city.cityId === parseInt(selectedCityParam))
+        console.log('City found', cityFound)
         if (cityFound) {
           setSelectedCity(cityFound)
+        }
+      }
+
+      if (selectedRoomParam) {
+        const roomFound = rooms.roomList.find((room) => room.roomId === parseInt(selectedRoomParam))
+        if (roomFound) {
+          const roomIndex = rooms.roomList.findIndex((room) => room.roomId === parseInt(selectedRoomParam));
+          setCurrentRoom(roomFound)
+          setCurrentRoomIndex(roomIndex);
         }
       }
     };
     getParamsFromURL();
   }, [])
+
+  useEffect(() => {
+    if (currentRoom) {
+      const params = new URLSearchParams(window.location.search);
+      const roomId = currentRoom.roomId
+      params.set('hR', roomId)
+      window.history.replaceState({}, '', `?${params.toString()}`)
+      window.dispatchEvent(new Event('popstate'))
+    }
+  }, [currentRoom])
+
+  const prevValue = () => {
+    const newIndex = currentRoomIndex === 0 ? roomList.length - 1 : currentRoomIndex - 1;
+    setCurrentRoom(rooms.roomList[newIndex]);
+    setCurrentRoomIndex(newIndex)
+  };
+
+  const nextValue = () => {
+    const newIndex = currentRoomIndex === roomList.length - 1 ? 0 : currentRoomIndex + 1;
+    setCurrentRoom(rooms.roomList[newIndex]);
+    setCurrentRoomIndex(newIndex)
+  };
 
   const handleCityClick = (city) => {
     if (city === selectedCity) return;
@@ -37,12 +78,30 @@ export default function City() {
       <div className="flex w-full">
         <div className="flex flex-col h-full w-full items-center">
           <div className="flex flex-col w-1/8">
-            <label className="text-orange-400">Room Selection:</label>
-            <input
-              className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
-              value="test"
-              disabled
-            ></input>
+            <label className="text-orange-400">Room Selection ({currentRoomIndex + 1} / {roomList.length})</label>
+            <div className="flex">
+              <img
+                src={isLeftHovered ? `${UI_BASE}left_hovered.png` : `${UI_BASE}left_normal.png`}
+                alt="Previous"
+                onClick={prevValue}
+                onMouseEnter={() => setIsLeftHovered(true)}
+                onMouseLeave={() => setIsLeftHovered(false)}
+                className="cursor-pointer"
+              />
+              <input
+                className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal text-center pl-1 outline-none focus:border-blue-500"
+                value={roomList[currentRoomIndex].roomName}
+                disabled
+              ></input>
+              <img
+                src={isRightHovered ? `${UI_BASE}right_hovered.png` : `${UI_BASE}right_normal.png`}
+                alt="Next"
+                onClick={nextValue}
+                onMouseEnter={() => setIsRightHovered(true)}
+                onMouseLeave={() => setIsRightHovered(false)}
+                className="cursor-pointer"
+              />
+            </div>
           </div>
           <CitySelection handleCityClick={handleCityClick} selectedCity={selectedCity} />
         </div>

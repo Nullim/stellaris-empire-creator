@@ -1,0 +1,150 @@
+{
+  "baseURL": "/images/rooms/",
+  "roomList": [
+    {
+      "roomId": 1,
+      "roomImage": "default_room.png",
+      "roomName": "Default Room"
+    },
+    {
+      "roomId": 2,
+      "roomImage": "hegemonic_imperialists_room.png",
+      "roomName": "Hegemonic Imperialists"
+    },
+    {
+      "roomId": 3,
+      "roomImage": "federation_builders_room.png",
+      "roomName": "Federation Builders"
+    },
+    {
+      "roomId": 4,
+      "roomImage": "democratic_crusaders_room.png",
+      "roomName": "Democratic Crusaders"
+    },
+    {
+      "roomId": 5,
+      "roomImage": "evangelizing_zealots_room.png",
+      "roomName": "Evangelizing Zealots"
+    },
+    {
+      "roomId": 6,
+      "roomImage": "migrating_flock_room.png",
+      "roomName": "Migrating Flock"
+    },
+    {
+      "roomId": 7,
+      "roomImage": "spiritual_seekers_room.png",
+      "roomName": "Spiritual Seekers"
+    },
+    {
+      "roomId": 8,
+      "roomImage": "decadent_hierarchy_room.png",
+      "roomName": "Decadent Hierarchy"
+    },
+    {
+      "roomId": 9,
+      "roomImage": "slaving_despots_room.png",
+      "roomName": "Slaving Despots"
+    },
+    {
+      "roomId": 10,
+      "roomImage": "erudite_explorers_room.png",
+      "roomName": "Erudite Explorers"
+    },
+    {
+      "roomId": 11,
+      "roomImage": "fanatic_purifier_room.png",
+      "roomName": "Fanatic Purifiers"
+    },
+    {
+      "roomId": 12,
+      "roomImage": "metalheads_room.png",
+      "roomName": "Metalheads"
+    },
+    {
+      "roomId": 13,
+      "roomImage": "harmonious_hierarchy_room.png",
+      "roomName": "Harmonious Hierarchy"
+    },
+    {
+      "roomId": 14,
+      "roomImage": "peaceful_traders_room.png",
+      "roomName": "Peaceful Traders"
+    },
+    {
+      "roomId": 15,
+      "roomImage": "xenophobic_isolationists_room.png",
+      "roomName": "Xenophobic Isolationists"
+    },
+    {
+      "roomId": 16,
+      "roomImage": "ruthless_capitalists_room.png",
+      "roomName": "Ruthless Capitalists"
+    },
+    {
+      "roomId": 17,
+      "roomImage": "honorbound_warriors_room.png",
+      "roomName": "Honorbound Warriors"
+    },
+    {
+      "roomId": 18,
+      "roomImage": "fanatic_befrienders_room.png",
+      "roomName": "Fanatic Befrienders"
+    },
+    {
+      "roomId": 19,
+      "roomImage": "hive_mind_room.png",
+      "roomName": "Hive Mind"
+    },
+    {
+      "roomId": 20,
+      "roomImage": "runic_room.png",
+      "roomName": "Runic"
+    },
+    {
+      "roomId": 21,
+      "roomImage": "scrappy_room.png",
+      "roomName": "Scrappy"
+    },
+    {
+      "roomId": 22,
+      "roomImage": "crystalline_room.png",
+      "roomName": "Crystalline"
+    },
+    {
+      "roomId": 23,
+      "roomImage": "organic_room.png",
+      "roomName": "Organic"
+    },
+    {
+      "roomId": 24,
+      "roomImage": "gilded_room.png",
+      "roomName": "Gilded"
+    },
+    {
+      "roomId": 25,
+      "roomImage": "machine_room.png",
+      "roomName": "Machine"
+    },
+    {
+      "roomId": 26,
+      "roomImage": "lithoid_room.png",
+      "roomName": "Lithoid"
+    },
+    {
+      "roomId": 27,
+      "roomImage": "necroids_room.png",
+      "roomName": "Necroid"
+    },
+    {
+      "roomId": 28,
+      "roomImage": "aquatics_room.png",
+      "roomName": "Aquatic"
+    },
+    {
+      "roomId": 29,
+      "roomImage": "toxoids_room.png",
+      "roomName": "Toxoid"
+    }
+  ]
+}

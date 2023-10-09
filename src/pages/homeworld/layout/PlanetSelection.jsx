@@ -21,7 +21,9 @@ export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, 
               onMouseEnter={() => handleHoverStatus(planet, true)}
               onMouseLeave={() => handleHoverStatus(planet, false)}
               onClick={() => handlePlanetClick(planet)}
-              className={`bg-cover w-full h-full mb-2 object-contain border-2 ${planet === selectedPlanet ? 'border-cyan-400' : 'border-gray-500'}`}
+              className={`bg-cover w-full h-full mb-2 object-contain border-2 cursor-pointer
+              ${planet === selectedPlanet ? 'border-cyan-400' : 'border-gray-500'}
+              `}
             >
               <img src={planet.planetURL + planet.planetSmall} className="max-w-full h-full object-contain object-bottom" />
             </div>

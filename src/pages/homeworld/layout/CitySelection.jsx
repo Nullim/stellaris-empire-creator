@@ -14,7 +14,9 @@ export default function CitySelection({ handleCityClick, selectedCity }) {
             // Continental World sky for background
             style={{ backgroundImage: `url(${planets.planetList[4].planetURL + planets.planetList[4].planetSky})` }}
             onClick={() => handleCityClick(city)}
-            className={`relative bg-cover text-center w-full h-full object-contain border-2 ${city === selectedCity ? 'border-cyan-400' : 'border-gray-500'}`}
+            className={`relative bg-cover text-center w-full h-full object-contain border-2 cursor-pointer
+            ${city === selectedCity ? 'border-cyan-400' : 'border-gray-500'}
+            `}
           >
             <p className="absolute top-0 left-0 w-full text-center bg-black/40">{city.cityName}</p>
             <img src={cities.baseURL + city.ecumenopolis} className="max-w-full h-full object-contain object-bottom" />
