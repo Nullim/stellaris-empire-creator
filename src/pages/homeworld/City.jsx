@@ -22,7 +22,6 @@ export default function City() {
 
       if (selectedCityParam) {
         const cityFound = cities.cityList.find((city) => city.cityId === parseInt(selectedCityParam))
-        console.log('City found', cityFound)
         if (cityFound) {
           setSelectedCity(cityFound)
         }
@@ -35,6 +34,11 @@ export default function City() {
           setCurrentRoom(roomFound)
           setCurrentRoomIndex(roomIndex);
         }
+      } else {
+        // Set default room if no room has been selected before.
+        params.set('hR', 1)
+        window.history.replaceState({}, '', `?${params.toString()}`)
+        window.dispatchEvent(new Event('popstate'))
       }
     };
     getParamsFromURL();

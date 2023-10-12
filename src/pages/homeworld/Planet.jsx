@@ -105,7 +105,7 @@ export default function Planet() {
             <div className="flex">
               <input
                 className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-thin pl-1 w-auto text-center"
-                value="test"
+                value="--IN DEVELOPMENT--"
                 disabled
               ></input>
             </div>

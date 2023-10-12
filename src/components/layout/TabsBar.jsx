@@ -39,7 +39,7 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
               {tab.menuItem.map((item, itemIndex) => (
                 <button
                   key={itemIndex}
-                  className="block px-3 py-1 text-white hover:bg-blue-700 w-full text-left"
+                  className="block px-3 py-1 text-white hover:bg-blue-700 w-full text-left z-50"
                   onClick={() => handleMenuItemSelect(item, tab.label)}
                 >
                   {item.menuLabel}

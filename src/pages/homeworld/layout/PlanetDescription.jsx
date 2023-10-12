@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
+
 import PropTypes from 'prop-types';
 import planetClimateColorSelector from '../utils/planetClimateColorSelector';
 import planets from "../../../utils/planets.json"
 
 export default function PlanetDescription({ planet }) {
   const { planetName, planetIcon, planetIconDescription, planetClimate, planetDescription } = planet
+
+  useEffect(() => {
+    planets.planetList.forEach((planet) => {
+      const image = new Image();
+      image.src = `${planets.iconsURL + planet.planetIcon}`;
+    });
+  }, []);
 
   return (
     <div className='flex flex-col text-left'>

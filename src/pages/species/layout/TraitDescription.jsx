@@ -24,7 +24,7 @@ export default function TraitDescription({ trait }) {
     } else {
       return (
         <div className='font-normal text-base'>
-          Exclusive with: <span className='text-yellow-400'>None</span>.
+          Exclusive with: <span className='text-yellow-400'>None</span>
         </div>
       )
     }

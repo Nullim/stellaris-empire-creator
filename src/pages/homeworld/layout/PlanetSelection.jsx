@@ -1,9 +1,36 @@
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import planets from "../../../utils/planets.json";
 import planetTypeColorSelector from "../utils/planetTypeColorSelector";
 
 export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, selectedPlanet }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const imagePromises = planets.planetList.map((planet) => {
+      return new Promise((resolve, reject) => {
+        const skyImage = new Image();
+        const planetImage = new Image();
+  
+        skyImage.onload = () => {
+          planetImage.onload = () => {
+            resolve();
+          };
+          planetImage.onerror = reject;
+          planetImage.src = planet.planetURL + planet.planetSmall;
+        };
+        skyImage.onerror = reject;
+        skyImage.src = planet.planetURL + planet.planetSky;
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => {
+        setIsLoading(false);
+      })
+  }, []);
+
   function planetsColumn(planetList) {
     const planetsToDisplay = planetList;
     const planetType = planetsToDisplay[0].planetType;
@@ -34,9 +61,18 @@ export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, 
   }
   return (
     <div className="flex justify-center items-center h-full w-full text-center ml-5">
-      {planetsColumn(planets.planetList.slice(0, 3))}
-      {planetsColumn(planets.planetList.slice(3, 6))}
-      {planetsColumn(planets.planetList.slice(6, 9))}
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center w-full h-full">
+          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-700"></div>
+          <p className="mt-2">Loading...</p>
+        </div>
+      ) : (
+        <>
+          {planetsColumn(planets.planetList.slice(0, 3))}
+          {planetsColumn(planets.planetList.slice(3, 6))}
+          {planetsColumn(planets.planetList.slice(6, 9))}
+        </>
+      )}
     </div>
   )
 }

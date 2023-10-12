@@ -29,12 +29,12 @@ export default function SpeciesPortraits() {
     getParamsFromURL();
   }, []);
 
-  function updateTraitParams (speciesData) {
+  function updateTraitParams(speciesData) {
     const params = new URLSearchParams(window.location.search);
     const traitParams = params.get('sT');
     const speciesParam = params.get('sN');
 
-    if(traitParams && speciesParam !== speciesData.name) {
+    if (traitParams && speciesParam !== speciesData.name) {
       params.delete('sT');
       window.history.replaceState({}, '', `?${params.toString()}`);
       window.dispatchEvent(new Event('popstate'))
@@ -99,7 +99,10 @@ export default function SpeciesPortraits() {
       <div className="w-full p-2 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
         <div className="flex flex-wrap border-2 border-gray-500 bg-black/40 p-1">
           {isLoading ? (
-            <p className="w-full h-full flex items-center justify-center cursor-progress">Loading...</p>
+            <div className="flex flex-col items-center justify-center w-full h-full">
+              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-700"></div>
+              <p className="mt-2">Loading...</p>
+            </div>
           ) : (
             selectedSpeciesData.images.map((image, index) => (
               <div
