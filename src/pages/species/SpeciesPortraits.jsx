@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import speciesData from "../../utils/species.json";
+import LoadingScreen from "../../components/layout/LoadingScreen";
 
 export default function SpeciesPortraits() {
   const [selectedSpeciesData, setSelectedSpeciesData] = useState(speciesData[0]);
@@ -99,10 +100,7 @@ export default function SpeciesPortraits() {
       <div className="w-full p-2 overflow-y-auto scrollbar scrollbar-thumb-blue-800 scrollbar-track-transparent">
         <div className="flex flex-wrap border-2 border-gray-500 bg-black/40 p-1">
           {isLoading ? (
-            <div className="flex flex-col items-center justify-center w-full h-full">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-700"></div>
-              <p className="mt-2">Loading...</p>
-            </div>
+            <LoadingScreen />
           ) : (
             selectedSpeciesData.images.map((image, index) => (
               <div

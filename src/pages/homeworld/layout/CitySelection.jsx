@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import cities from "../../../utils/cities.json";
 import planets from "../../../utils/planets.json";
+import LoadingScreen from '../../../components/layout/LoadingScreen';
 
 export default function CitySelection({ handleCityClick, selectedCity }) {
   const [isLoading, setIsLoading] = useState(true)
@@ -25,10 +26,7 @@ export default function CitySelection({ handleCityClick, selectedCity }) {
   return (
     <div className="flex flex-col w-full h-full mt-2 bg-black/40">
       {isLoading ? (
-        <div className="flex flex-col items-center justify-center w-full h-full">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-700"></div>
-          <p className="mt-2">Loading...</p>
-        </div>
+        <LoadingScreen />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 w-full h-full">
           {cityList.map((city) => (

@@ -22,6 +22,7 @@ export default function SpeciesTraits() {
     const isMachine = urlParams.get('sN') === 'Machine';
     const isBotanical = urlParams.get('sN') === 'Plantoid' || urlParams.get('sN') === 'Fungoid';
     const isLithoid = urlParams.get('sN') === 'Lithoid';
+    const isOceanHomeworld = urlParams.get('hP');
 
     let traitsToSet;
     let ImageURLToSet;
@@ -45,9 +46,17 @@ export default function SpeciesTraits() {
       ImageURLToSet = [speciesTraits.organicUrl];
     }
 
+    let aquaticInvisible;
+    // Ocean World Id
+    if(isOceanHomeworld !== '4') {
+      aquaticInvisible = 1
+    } else {
+      aquaticInvisible = null;
+    }
+
     const visibleTraits = {};
     traitsToSet.forEach(trait => {
-      trait.traitId === compulsoryTraitToSet
+      trait.traitId === compulsoryTraitToSet || trait.traitId === aquaticInvisible
         ? visibleTraits[trait.traitId] = false
         : visibleTraits[trait.traitId] = true
     });

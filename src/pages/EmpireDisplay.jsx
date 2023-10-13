@@ -5,6 +5,7 @@ import speciesTraits from "../utils/speciesTraits.json";
 import planets from "../utils/planets.json"
 import rooms from "../utils/rooms.json";
 import cities from "../utils/cities.json"
+import LoadingScreen from "../components/layout/LoadingScreen";
 
 export default function EmpireDisplay() {
   const [requiredParams, setRequiredParams] = useState(false);
@@ -158,10 +159,7 @@ export default function EmpireDisplay() {
             </div>
           </div>
           {isLoading ? (
-            <div className="flex flex-col items-center justify-center w-full h-full">
-              <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-blue-700"></div>
-              <p className="mt-2">Loading...</p>
-            </div>
+            <LoadingScreen />
           ) : (
             <div className="flex h-full relative">
               <p className="absolute top-0 text-center"></p>

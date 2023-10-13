@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LoadingScreen from '../../../components/layout/LoadingScreen';
 
 const BASE_URL = '../../images/genders'
 
@@ -30,18 +31,34 @@ const GenderSelection = () => {
   const [selectedGender, setSelectedGender] = useState('default');
   const [hoveredGender, setHoveredGender] = useState(null);
   const [isMachine, setIsMachine] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    genderData.forEach((genderInfo) => {
-      const normalImage = new Image();
-      normalImage.src = `${genderInfo.genderURL}${genderInfo.normal}`;
+    const imagePromises = genderData.map((genderInfo) => {
+      return new Promise((resolve, reject) => {
+        const normalImage = new Image();
+        const selectedImage = new Image();
+        const hoverImage = new Image();
 
-      const selectedImage = new Image();
-      selectedImage.src = `${genderInfo.genderURL}${genderInfo.selected}`;
-
-      const hoverImage = new Image();
-      hoverImage.src = `${genderInfo.genderURL}${genderInfo.hover}`;
+        normalImage.onload = () => {
+          selectedImage.onload = () => {
+            hoverImage.onload = () => {
+              resolve()
+            }
+            hoverImage.src = `${genderInfo.genderURL}${genderInfo.hover}`;
+            hoverImage.onerror = reject;
+          }
+          selectedImage.src = `${genderInfo.genderURL}${genderInfo.selected}`;
+          selectedImage.onerror = reject;
+        }
+        normalImage.src = `${genderInfo.genderURL}${genderInfo.normal}`;
+        normalImage.onerror = reject;
+      })
     });
+    Promise.all(imagePromises)
+      .then(() => {
+        setIsLoading(false);
+      })
 
     const getParamsFromURL = () => {
       const params = new URLSearchParams(window.location.search);
@@ -90,27 +107,31 @@ const GenderSelection = () => {
   return (
     <div className='flex flex-col'>
       <div className="flex items-center justify-start">
-        {!isMachine && genderData.map((genderInfo) => (
-          <div
-            key={genderInfo.gender}
-            className="cursor-pointer pr-3"
-            onMouseEnter={() => handleMouseEnter(genderInfo.gender)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(genderInfo.gender)}
-          >
-            {/* Render appropriate gender image */}
-            <img
-              src={
-                selectedGender === genderInfo.gender
-                  ? `${genderInfo.genderURL}${genderInfo.selected}`
-                  : hoveredGender === genderInfo.gender
-                    ? `${genderInfo.genderURL}${genderInfo.hover}`
-                    : `${genderInfo.genderURL}${genderInfo.normal}`
-              }
-              alt={genderInfo.gender}
-            />
-          </div>
-        ))}
+        {isLoading && !isMachine ? (
+          <LoadingScreen />
+        ) : (
+          !isMachine && genderData.map((genderInfo) => (
+            <div
+              key={genderInfo.gender}
+              className="cursor-pointer pr-3"
+              onMouseEnter={() => handleMouseEnter(genderInfo.gender)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => handleClick(genderInfo.gender)}
+            >
+              {/* Render appropriate gender image */}
+              <img
+                src={
+                  selectedGender === genderInfo.gender
+                    ? `${genderInfo.genderURL}${genderInfo.selected}`
+                    : hoveredGender === genderInfo.gender
+                      ? `${genderInfo.genderURL}${genderInfo.hover}`
+                      : `${genderInfo.genderURL}${genderInfo.normal}`
+                }
+                alt={genderInfo.gender}
+              />
+            </div>
+          ))
+        )}
       </div>
       <p className='font-thin pt-2'>
         {isMachine ? "You cannot select a gender as a machine." : `Note: You can click the same gender icon to return to "default" genders.`}
