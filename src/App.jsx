@@ -15,7 +15,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative overflow-hidden font-gothic flex flex-col box-border">
+    <div className="relative overflow-hidden font-gothic flex flex-col box-border" style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }}>
       <img className="w-full h-screen object-cover" draggable="false" src="/images/background.png" alt="Background Image" />
       <div className="absolute w-full h-full inset-0 flex flex-col mt-8 justify-start items-center">
         <div className="flex justify-center items-end w-11/12 bg-black/50 backdrop-blur-sm border-b border-blue-700 z-50">

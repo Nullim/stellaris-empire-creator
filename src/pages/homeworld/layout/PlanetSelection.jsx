@@ -45,11 +45,14 @@ export default function PlanetSelection({ handleHoverStatus, handlePlanetClick, 
           {planetsToDisplay.map((planet) => (
             <div
               key={planet.planetId}
-              style={{ backgroundImage: `url(${planet.planetURL + planet.planetSky})` }}
+              style={{ 
+                backgroundImage: `url(${planet.planetURL + planet.planetSky})`,
+                cursor: `url(/images/ui/cursor_pointer.png), pointer`
+              }}
               onMouseEnter={() => handleHoverStatus(planet, true)}
               onMouseLeave={() => handleHoverStatus(planet, false)}
               onClick={() => handlePlanetClick(planet)}
-              className={`bg-cover w-full h-full mb-2 object-contain border-2 cursor-pointer
+              className={`bg-cover w-full h-full mb-2 object-contain border-2
               ${planet === selectedPlanet ? 'border-cyan-400' : 'border-gray-500'}
               `}
             >

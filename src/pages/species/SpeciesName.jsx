@@ -77,7 +77,7 @@ export default function SpeciesName() {
     <div className="flex justify-evenly font-semibold">
       <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
-          <label className="pb-1">Name</label>
+          <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="pb-1">Name</label>
           <input
             className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={name}
@@ -86,7 +86,7 @@ export default function SpeciesName() {
           ></input>
         </div>
         <div className="flex flex-col pt-2">
-          <label className="pb-1">Plural</label>
+          <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="pb-1">Plural</label>
           <input
             className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={namePlural}
@@ -95,7 +95,7 @@ export default function SpeciesName() {
           ></input>
         </div>
         <div className="flex flex-col pt-2">
-          <label className="pb-1">Adjective</label>
+          <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="pb-1">Adjective</label>
           <input
             className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
             value={adjective}
@@ -107,7 +107,7 @@ export default function SpeciesName() {
       <div className="block">
         <div className="relative flex flex-col pt-10">
           <div className="pb-1 flex justify-between items-center">
-            <label>Biography (optional)</label>
+            <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} >Biography (optional)</label>
             <p className="text-right">{biographyLength}/500</p>
           </div>
           <textarea
@@ -123,7 +123,7 @@ export default function SpeciesName() {
       </div>
       <div className="block lg:px-4">
         <div className="flex flex-col pt-10">
-          <label className="pb-1">Gender (optional)</label>
+          <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="pb-1">Gender (optional)</label>
           <GenderSelection />
         </div>
       </div>

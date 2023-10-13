@@ -113,7 +113,8 @@ const GenderSelection = () => {
           !isMachine && genderData.map((genderInfo) => (
             <div
               key={genderInfo.gender}
-              className="cursor-pointer pr-3"
+              style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
+              className="pr-3"
               onMouseEnter={() => handleMouseEnter(genderInfo.gender)}
               onMouseLeave={handleMouseLeave}
               onClick={() => handleClick(genderInfo.gender)}

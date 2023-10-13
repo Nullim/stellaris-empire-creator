@@ -83,7 +83,7 @@ export default function Planet() {
       <div className="flex justify-center w-full">
         <div className="flex font-thin">
           <div className="flex flex-col pt-1 px-4">
-            <label className="text-orange-400">Planet Name:</label>
+            <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="text-orange-400">Planet Name:</label>
             <input
               className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
               value={planetName}
@@ -92,7 +92,7 @@ export default function Planet() {
             ></input>
           </div>
           <div className="flex flex-col pt-1 px-4">
-            <label className="text-orange-400">Star Name:</label>
+            <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="text-orange-400">Star Name:</label>
             <input
               className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal pl-1 outline-none focus:border-blue-500"
               value={starName}
@@ -101,9 +101,10 @@ export default function Planet() {
             ></input>
           </div>
           <div className="flex flex-col pt-1 px-4">
-            <label className="text-orange-400">Starting Solar System:</label>
+            <label style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }} className="text-orange-400">Starting Solar System:</label>
             <div className="flex">
               <input
+                style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }}
                 className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-thin pl-1 w-auto text-center"
                 value="--IN DEVELOPMENT--"
                 disabled

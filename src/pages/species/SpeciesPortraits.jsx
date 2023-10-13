@@ -86,7 +86,8 @@ export default function SpeciesPortraits() {
           {speciesData.map((namelist, index) => (
             <li
               key={index}
-              className={`py-1 pl-2 cursor-pointer border font-bold 
+              style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
+              className={`py-1 pl-2 border font-bold 
                 ${namelist === selectedSpeciesData ? "border-blue-500 bg-blue-700/10" : "border-transparent"}
               `}
               onClick={() => handleSpeciesClick(namelist)}>
@@ -109,7 +110,8 @@ export default function SpeciesPortraits() {
                   ${image === selectedPortrait ? "border-blue-500 bg-gray-900/70" : "border border-gray-700"}
                 `}>
                 <img
-                  className="cursor-pointer object-contain object-bottom w-36 h-36"
+                  style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
+                  className="object-contain object-bottom w-36 h-36"
                   src={`${selectedSpeciesData.url}/${image}`}
                   alt={image}
                   onClick={() => handlePortraitClick(image)}

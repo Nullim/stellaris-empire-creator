@@ -33,9 +33,12 @@ export default function CitySelection({ handleCityClick, selectedCity }) {
             <div
               key={city.cityId}
               // Continental World sky for background
-              style={{ backgroundImage: `url(${planets.planetList[4].planetURL + planets.planetList[4].planetSky})` }}
+              style={{ 
+                backgroundImage: `url(${planets.planetList[4].planetURL + planets.planetList[4].planetSky})`, 
+                cursor: `url(/images/ui/cursor_pointer.png), pointer` 
+              }}
               onClick={() => handleCityClick(city)}
-              className={`relative bg-cover text-center w-full h-full object-contain border-2 cursor-pointer
+              className={`relative bg-cover text-center w-full h-full object-contain border-2
               ${city === selectedCity ? 'border-cyan-400' : 'border-gray-500'}
               `}
             >

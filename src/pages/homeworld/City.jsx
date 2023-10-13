@@ -82,7 +82,12 @@ export default function City() {
       <div className="flex w-full">
         <div className="flex flex-col h-full w-full items-center">
           <div className="flex flex-col w-1/8">
-            <label className="text-orange-400">Room Selection ({currentRoomIndex + 1} / {roomList.length})</label>
+            <label
+              style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }}
+              className="text-orange-400"
+            >
+              Room Selection ({currentRoomIndex + 1} / {roomList.length})
+            </label>
             <div className="flex">
               <img
                 src={isLeftHovered ? `${UI_BASE}left_hovered.png` : `${UI_BASE}left_normal.png`}
@@ -90,9 +95,10 @@ export default function City() {
                 onClick={prevValue}
                 onMouseEnter={() => setIsLeftHovered(true)}
                 onMouseLeave={() => setIsLeftHovered(false)}
-                className="cursor-pointer"
+                style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
               />
               <input
+                style={{ cursor: `url(/images/ui/cursor_normal.png), auto` }}
                 className="border-2 border-gray-500 bg-black/40 backdrop-blur-md font-normal text-center pl-1 outline-none focus:border-blue-500"
                 value={roomList[currentRoomIndex].roomName}
                 disabled
@@ -103,7 +109,7 @@ export default function City() {
                 onClick={nextValue}
                 onMouseEnter={() => setIsRightHovered(true)}
                 onMouseLeave={() => setIsRightHovered(false)}
-                className="cursor-pointer"
+                style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
               />
             </div>
           </div>

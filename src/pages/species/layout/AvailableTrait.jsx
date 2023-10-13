@@ -30,7 +30,8 @@ export default function AvailableTrait({
   return (
     <div
       onMouseEnter={() => handleHoverStatus(trait, true)}
-      className={`border-2 border-gray-700 cursor-pointer p-1 mb-2 last-of-type:mb-0 flex items-center justify-between
+      style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
+      className={`border-2 border-gray-700 p-1 mb-2 last-of-type:mb-0 flex items-center justify-between
         ${isVisible ? 'bg-gray-900/70' : 'hidden'}
         `}
       onClick={handleClick}

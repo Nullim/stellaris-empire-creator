@@ -27,7 +27,8 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
           onMouseLeave={handleTabMouseLeave}
         >
           <button
-            className={`cursor-pointer px-4 py-2 font-bold ${
+            style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
+            className={`px-4 py-2 font-bold ${
               activeTab === index ? "bg-blue-800 text-white" : "bg-blue-900 text-white"
             }`}
           >
@@ -38,6 +39,7 @@ const TabsBar = ({ tabs, activeTab, onTabClick, onMenuItemSelect }) => {
             <div className="absolute w-32 bg-blue-800">
               {tab.menuItem.map((item, itemIndex) => (
                 <button
+                  style={{ cursor: `url(/images/ui/cursor_pointer.png), pointer` }}
                   key={itemIndex}
                   className="block px-3 py-1 text-white hover:bg-blue-700 w-full text-left z-50"
                   onClick={() => handleMenuItemSelect(item, tab.label)}
